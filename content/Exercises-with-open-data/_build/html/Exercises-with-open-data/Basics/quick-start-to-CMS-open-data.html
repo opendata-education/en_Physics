@@ -1,0 +1,698 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quick start to CMS Open Data &#8212; My Jupyter Book</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.5f77b4aec8189eecf79907ce328c390d.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="warming-up" href="../Warming-up/warming-up.html" />
+    <link rel="prev" title="Statistics with the CMS Open Data" href="Statistics.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+      
+      <h1 class="site-logo" id="site-title">My Jupyter Book</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../intro.html">
+   Welcome
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="basics.html">
+   basics
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="Overlaid-histograms.html">
+     Importing a CMS open data file and creating overlaid histograms to analyze data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Statistics.html">
+     Statistics with the CMS Open Data
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Quick start to CMS Open Data
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Warming-up/warming-up.html">
+   warming-up
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Warming-up/Calculate-invariant-mass.html">
+     Calculating the invariant mass
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Warming-up/Invariant-mass-histogram.html">
+     Plotting the invariant mass histogram
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Warming-up/Invariant-mass-histogram-select-data.html">
+     Background
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Advanced/advanced.html">
+   advanced
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Advanced/Hunting-the-Higgs-4leptons.html">
+     Higgs hunting - an example of scientific research
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Advanced/Normfit-transversemomentum%2Bpseudorapidity.html">
+     Creating a normal distribution fit of transverse momentum+pseudorapidity
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Advanced/Pseudorapidity-resolution.html">
+     Background
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Other/other.html">
+   other
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Other/Animations_example.html">
+     An example notebook of how to use animations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Other/barometer_col_de_la_fausille.html">
+     Measuring atmospheric pressure
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Other/Maps_example.html">
+     An example notebook of how to use (heat)maps with Python
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/Exercises-with-open-data/Basics/quick-start-to-CMS-open-data.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/Exercises-with-open-data/Basics/quick-start-to-CMS-open-data.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#some-additional-material">
+   Some additional material
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="quick-start-to-cms-open-data">
+<h1>Quick start to CMS Open Data<a class="headerlink" href="#quick-start-to-cms-open-data" title="Permalink to this headline">¶</a></h1>
+<p>This is a jupyter notebook, where you can have text “cells” (like this text here) and code “cells” i.e. boxes where you can write python code to be executed (like the one below). No need to install anything (if you run this on <a class="reference external" href="http://mybinder.org/">http://mybinder.org/</a>) or find compilers, it is all done for you in background.</p>
+<p>For the exercise with CMS open data, we use python as programming language: it is easy to get started, just type, for example, 1 + 1 in the cell below and click on “Run” icon above.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span><span class="o">+</span><span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now try something more advanced, for example sqrt(4)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sqrt</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_6384</span><span class="o">/</span><span class="mf">1103852951.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">sqrt</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;sqrt&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<p>That failed: basic python can do some operations but for anything more complex, we need additional software packages or “modules”.</p>
+<p>That’s what we will import here (select the cell below and run it by clicking on the Run icon):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span> 
+<span class="c1">#pandas is for data structures and data analysis tools</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="c1">#numpy is for scientific computing</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="c1">#matplotlib is for plotting</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now, you want to try whether sqrt(4) works now? No, it does not… you will have to tell jupyter that you want to take the function from numpy (which for brevity was named np above). So try np.sqrt(4)…</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.0
+</pre></div>
+</div>
+</div>
+</div>
+<p>Note that you can modify this page at any time, it does no harm. You can add cells (Insert) and change their type from Code (default) to text (i.e. “Markdown”) under Cell -&gt; Cell type.</p>
+<p>OK, let’s get started with the data. We’ll read the data from the CERN Open data portal. We call it “data” but you can use any other name.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># we use read_csv function from pandas to read the data into a &quot;data frame&quot;</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;http://cern.ch/opendata/record/545/files/Dimuon_DoubleMu.csv&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We’ll have a look what we got in these data:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Run</th>
+      <th>Event</th>
+      <th>type1</th>
+      <th>E1</th>
+      <th>px1</th>
+      <th>py1</th>
+      <th>pz1</th>
+      <th>pt1</th>
+      <th>eta1</th>
+      <th>phi1</th>
+      <th>...</th>
+      <th>type2</th>
+      <th>E2</th>
+      <th>px2</th>
+      <th>py2</th>
+      <th>pz2</th>
+      <th>pt2</th>
+      <th>eta2</th>
+      <th>phi2</th>
+      <th>Q2</th>
+      <th>M</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>165617</td>
+      <td>74601703</td>
+      <td>G</td>
+      <td>9.6987</td>
+      <td>-9.5104</td>
+      <td>0.3662</td>
+      <td>1.8633</td>
+      <td>9.5175</td>
+      <td>0.1945</td>
+      <td>3.1031</td>
+      <td>...</td>
+      <td>G</td>
+      <td>9.7633</td>
+      <td>7.3277</td>
+      <td>-1.1524</td>
+      <td>6.3473</td>
+      <td>7.4178</td>
+      <td>0.7756</td>
+      <td>-0.1560</td>
+      <td>1</td>
+      <td>17.4922</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>165617</td>
+      <td>75100943</td>
+      <td>G</td>
+      <td>6.2039</td>
+      <td>-4.2666</td>
+      <td>0.4565</td>
+      <td>-4.4793</td>
+      <td>4.2910</td>
+      <td>-0.9121</td>
+      <td>3.0350</td>
+      <td>...</td>
+      <td>G</td>
+      <td>9.6690</td>
+      <td>7.2740</td>
+      <td>-2.8211</td>
+      <td>-5.7104</td>
+      <td>7.8019</td>
+      <td>-0.6786</td>
+      <td>-0.3700</td>
+      <td>1</td>
+      <td>11.5534</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>165617</td>
+      <td>75587682</td>
+      <td>G</td>
+      <td>19.2892</td>
+      <td>-4.2121</td>
+      <td>-0.6516</td>
+      <td>18.8121</td>
+      <td>4.2622</td>
+      <td>2.1905</td>
+      <td>-2.9881</td>
+      <td>...</td>
+      <td>G</td>
+      <td>9.8244</td>
+      <td>4.3439</td>
+      <td>-0.4735</td>
+      <td>8.7985</td>
+      <td>4.3697</td>
+      <td>1.4497</td>
+      <td>-0.1086</td>
+      <td>1</td>
+      <td>9.1636</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>165617</td>
+      <td>75660978</td>
+      <td>G</td>
+      <td>7.0427</td>
+      <td>-6.3268</td>
+      <td>-0.2685</td>
+      <td>3.0802</td>
+      <td>6.3325</td>
+      <td>0.4690</td>
+      <td>-3.0992</td>
+      <td>...</td>
+      <td>G</td>
+      <td>5.5857</td>
+      <td>4.4748</td>
+      <td>0.8489</td>
+      <td>-3.2319</td>
+      <td>4.5546</td>
+      <td>-0.6605</td>
+      <td>0.1875</td>
+      <td>1</td>
+      <td>12.4774</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>165617</td>
+      <td>75947690</td>
+      <td>G</td>
+      <td>7.2751</td>
+      <td>0.1030</td>
+      <td>-5.5331</td>
+      <td>-4.7212</td>
+      <td>5.5340</td>
+      <td>-0.7736</td>
+      <td>-1.5522</td>
+      <td>...</td>
+      <td>G</td>
+      <td>7.3181</td>
+      <td>-0.3988</td>
+      <td>6.9408</td>
+      <td>2.2825</td>
+      <td>6.9523</td>
+      <td>0.3227</td>
+      <td>1.6282</td>
+      <td>1</td>
+      <td>14.3159</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 21 columns</p>
+</div></div></div>
+</div>
+<p>This is a dataset from <a class="reference external" href="http://opendata.cern.ch/record/545">http://opendata.cern.ch/record/545</a> on CERN Open Data Portal. It is a csv (comma separated values) file which can be easily used in many different frameworks. You can find other files of this type with <a class="reference external" href="http://opendata.cern.ch/search?page=1&amp;size=20&amp;q=&amp;type=Dataset&amp;experiment=CMS&amp;subtype=Derived&amp;file_type=csv">this search</a>.</p>
+<p>What has been written in this dataset are the values (charge, direction, energy, momentum) of two muons from a CMS primary dataset <a class="reference external" href="http://opendata.cern.ch/record/17">http://opendata.cern.ch/record/17</a>. All other particles have been omitted. If you’re interested, the code and instructions for producing this kind of simplified datasets are in <a class="reference external" href="http://opendata.cern.ch/record/552">http://opendata.cern.ch/record/552</a></p>
+<p>Now, if you brave enough you can compute the invariant mass for the two muons. If you are in a hurry, just use the value M, which has been computed for you already :-)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">invariant_mass</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;M&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>You can type the name of your new variable to see what went in there:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">invariant_mass</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0        17.4922
+1        11.5534
+2         9.1636
+3        12.4774
+4        14.3159
+          ...   
+99995    11.2077
+99996    14.5819
+99997    29.8425
+99998    20.2068
+99999     9.3741
+Name: M, Length: 100000, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now let’s make a histogram</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Plot the histogram with the function hist() of the matplotlib.pyplot module:</span>
+<span class="c1"># (http://matplotlib.org/api/pyplot_api.html?highlight=matplotlib.pyplot.hist#matplotlib.pyplot.hist).</span>
+<span class="c1"># &#39;Bins&#39; determines the number of the bins used.</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">invariant_mass</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">500</span><span class="p">)</span>
+
+<span class="c1"># Name the axises and give the title.</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Invariant mass [GeV]&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Number of events&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;The histogram of the invariant masses of two muons </span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span> <span class="c1"># \n creates a new line for making the title look better</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">yscale</span><span class="p">(</span><span class="s1">&#39;log&#39;</span><span class="p">)</span> 
+<span class="c1"># Show the plot.</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/quick-start-to-CMS-open-data_18_0.png" src="../../_images/quick-start-to-CMS-open-data_18_0.png" />
+</div>
+</div>
+<p>You can check whether log scale looks better. Just edit the cell above, add plt.yscale(‘log’) before plt.show() and run it again.</p>
+<p>Now zoom to see whether you can find some familiar particles in the dimuon spectrun. We can do that by setting the range of the histogram with option range=[min,max].</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">invariant_mass</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="nb">range</span><span class="o">=</span><span class="p">[</span><span class="mi">8</span><span class="p">,</span><span class="mi">12</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/quick-start-to-CMS-open-data_21_0.png" src="../../_images/quick-start-to-CMS-open-data_21_0.png" />
+</div>
+</div>
+<p>Have a look at the very low invariant mass range as well (change the range limits in the cell above and run it again). You will be surprised to see how well some low mass particles are visible in our data!</p>
+<p>We have compiled <a class="reference external" href="https://github.com/cms-opendata-education/cms-opendata-education/blob/master/Particle%20List%20with%20quark%20composition.pdf">a list of particles decaying into two muons</a> (extracted for easier reading for educational purposes from C. Patrignani et al. (Particle Data Group), Chin. Phys. C, 40, 100001 (2016) and 2017 update.). In a teaching situation, you can ask students to identify these particles in the plot.</p>
+<p>Note that binder does not save your changes. To save your work, download it from File -&gt; Download as -&gt; Notebook. This saves a local copy to your computer (and has no effect on the original notebook).</p>
+<div class="section" id="some-additional-material">
+<h2>Some additional material<a class="headerlink" href="#some-additional-material" title="Permalink to this headline">¶</a></h2>
+<p>If you want to compute yourself the invariant mass from energy and momentum of the two muons, know that you can access the values out of our dataset by data.E1 and data.px1 etc. Remember that before every complex mathematical function you must define that it comes from the numpy package, which we imported and which we defined as np (e.g. np.sqrt(your_value)).</p>
+<p>As an extra challenge, note that it happens that one value of the newly computed invariant mass squared goes below 0 (sorry, this is real data) so we will have to exclude that from our set of values before taking the square root… not that nice but a good occasion to show how you can very efficiently set a selection criteria in a dataset with “pandas”</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mass_squared</span> <span class="o">=</span> <span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">E1</span> <span class="o">+</span> <span class="n">data</span><span class="o">.</span><span class="n">E2</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="p">((</span><span class="n">data</span><span class="o">.</span><span class="n">px1</span> <span class="o">+</span> <span class="n">data</span><span class="o">.</span><span class="n">px2</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">py1</span> <span class="o">+</span> <span class="n">data</span><span class="o">.</span><span class="n">py2</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>  <span class="o">+</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">pz1</span> <span class="o">+</span> <span class="n">data</span><span class="o">.</span><span class="n">pz2</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">mass_squared_pos</span> <span class="o">=</span> <span class="n">mass_squared</span><span class="p">[(</span><span class="n">mass_squared</span> <span class="o">&gt;</span><span class="mi">0</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now plot the invariant mass again to compare it with the histograms above. Did we get it right?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">mass_squared_pos</span><span class="p">),</span> <span class="n">bins</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="nb">range</span><span class="o">=</span><span class="p">[</span><span class="mi">8</span><span class="p">,</span><span class="mi">12</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>For more examples, have a look in <a class="reference external" href="https://github.com/cms-opendata-education">https://github.com/cms-opendata-education</a>. You are free to copy and modify these notebooks, and suggest new ones to be added to our collection. This material will also be available through CERN Open Data Portal.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./Exercises-with-open-data\Basics"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="Statistics.html" title="previous page">Statistics with the CMS Open Data</a>
+    <a class='right-next' id="next-link" href="../Warming-up/warming-up.html" title="next page">warming-up</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By The Jupyter Book community<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
