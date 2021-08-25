@@ -368,161 +368,125 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2085</span><span class="o">/</span><span class="mf">2216979451.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span> 
-<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="c1"># anim.to_jshtml() changes the animation to (javascript)html, so it can be shown on Notebook</span>
-<span class="ne">----&gt; </span><span class="mi">9</span> <span class="n">HTML</span><span class="p">(</span><span class="n">anim</span><span class="o">.</span><span class="n">to_jshtml</span><span class="p">())</span>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>---------------------------------------------------------------------------
+KeyboardInterrupt                         Traceback (most recent call last)
+/tmp/ipykernel_1985/2216979451.py in &lt;module&gt;
+      7 
+      8 # anim.to_jshtml() changes the animation to (javascript)html, so it can be shown on Notebook
+----&gt; 9 HTML(anim.to_jshtml())
 
-<span class="nn">/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/matplotlib/animation.py</span> in <span class="ni">to_jshtml</span><span class="nt">(self, fps, embed_frames, default_mode)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1400</span>                                     <span class="n">embed_frames</span><span class="o">=</span><span class="n">embed_frames</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1401</span>                                     <span class="n">default_mode</span><span class="o">=</span><span class="n">default_mode</span><span class="p">)</span>
-<span class="ne">-&gt; </span><span class="mi">1402</span>                 <span class="bp">self</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">path</span><span class="p">),</span> <span class="n">writer</span><span class="o">=</span><span class="n">writer</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1403</span>                 <span class="bp">self</span><span class="o">.</span><span class="n">_html_representation</span> <span class="o">=</span> <span class="n">path</span><span class="o">.</span><span class="n">read_text</span><span class="p">()</span>
-<span class="g g-Whitespace">   </span><span class="mi">1404</span> 
+/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/matplotlib/animation.py in to_jshtml(self, fps, embed_frames, default_mode)
+   1400                                     embed_frames=embed_frames,
+   1401                                     default_mode=default_mode)
+-&gt; 1402                 self.save(str(path), writer=writer)
+   1403                 self._html_representation = path.read_text()
+   1404 
 
-<span class="nn">/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/matplotlib/animation.py</span> in <span class="ni">save</span><span class="nt">(self, filename, writer, fps, dpi, codec, bitrate, extra_args, metadata, extra_anim, savefig_kwargs, progress_callback)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1171</span>                 <span class="k">for</span> <span class="n">anim</span><span class="p">,</span> <span class="n">d</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">all_anim</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
-<span class="g g-Whitespace">   </span><span class="mi">1172</span>                     <span class="c1"># TODO: See if turning off blit is really necessary</span>
-<span class="ne">-&gt; </span><span class="mi">1173</span>                     <span class="n">anim</span><span class="o">.</span><span class="n">_draw_next_frame</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">blit</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1174</span>                     <span class="k">if</span> <span class="n">progress_callback</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1175</span>                         <span class="n">progress_callback</span><span class="p">(</span><span class="n">frame_number</span><span class="p">,</span> <span class="n">total_frames</span><span class="p">)</span>
+/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/matplotlib/animation.py in save(self, filename, writer, fps, dpi, codec, bitrate, extra_args, metadata, extra_anim, savefig_kwargs, progress_callback)
+   1171                 for anim, d in zip(all_anim, data):
+   1172                     # TODO: See if turning off blit is really necessary
+-&gt; 1173                     anim._draw_next_frame(d, blit=False)
+   1174                     if progress_callback is not None:
+   1175                         progress_callback(frame_number, total_frames)
 
-<span class="nn">/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/matplotlib/animation.py</span> in <span class="ni">_draw_next_frame</span><span class="nt">(self, framedata, blit)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1207</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_pre_draw</span><span class="p">(</span><span class="n">framedata</span><span class="p">,</span> <span class="n">blit</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1208</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_draw_frame</span><span class="p">(</span><span class="n">framedata</span><span class="p">)</span>
-<span class="ne">-&gt; </span><span class="mi">1209</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_post_draw</span><span class="p">(</span><span class="n">framedata</span><span class="p">,</span> <span class="n">blit</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1210</span> 
-<span class="g g-Whitespace">   </span><span class="mi">1211</span>     <span class="k">def</span> <span class="nf">_init_draw</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/matplotlib/animation.py in _draw_next_frame(self, framedata, blit)
+   1206         # post- draw, as well as the drawing of the frame itself.
+   1207         self._pre_draw(framedata, blit)
+-&gt; 1208         self._draw_frame(framedata)
+   1209         self._post_draw(framedata, blit)
+   1210 
 
-<span class="nn">/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/matplotlib/animation.py</span> in <span class="ni">_post_draw</span><span class="nt">(self, framedata, blit)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1232</span>             <span class="bp">self</span><span class="o">.</span><span class="n">_blit_draw</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_drawn_artists</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1233</span>         <span class="k">else</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">1234</span>             <span class="bp">self</span><span class="o">.</span><span class="n">_fig</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">draw_idle</span><span class="p">()</span>
-<span class="g g-Whitespace">   </span><span class="mi">1235</span> 
-<span class="g g-Whitespace">   </span><span class="mi">1236</span>     <span class="c1"># The rest of the code in this class is to facilitate easy blitting</span>
+/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/matplotlib/animation.py in _draw_frame(self, framedata)
+   1774         # Call the func with framedata and args. If blitting is desired,
+   1775         # func needs to return a sequence of any artists that were modified.
+-&gt; 1776         self._drawn_artists = self._func(framedata, *self._args)
+   1777 
+   1778         if self._blit:
 
-<span class="nn">/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/matplotlib/backend_bases.py</span> in <span class="ni">draw_idle</span><span class="nt">(self, *args, **kwargs)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2053</span>         <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_is_idle_drawing</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">2054</span>             <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">_idle_draw_cntx</span><span class="p">():</span>
-<span class="ne">-&gt; </span><span class="mi">2055</span>                 <span class="bp">self</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2056</span> 
-<span class="g g-Whitespace">   </span><span class="mi">2057</span>     <span class="k">def</span> <span class="nf">get_width_height</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+/tmp/ipykernel_1985/3120148125.py in updt_hist(num, iMass)
+      8     axes.set_ylim(0,8000)
+      9     axes.set_xlim(0,200)
+---&gt; 10     plt.hist(iMass[:num*480], bins = 350)
+     11 
 
-<span class="nn">/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/matplotlib/backends/backend_agg.py</span> in <span class="ni">draw</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">404</span>              <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">toolbar</span><span class="o">.</span><span class="n">_wait_cursor_for_draw_cm</span><span class="p">()</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">toolbar</span>
-<span class="g g-Whitespace">    </span><span class="mi">405</span>               <span class="k">else</span> <span class="n">nullcontext</span><span class="p">()):</span>
-<span class="ne">--&gt; </span><span class="mi">406</span>             <span class="bp">self</span><span class="o">.</span><span class="n">figure</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">renderer</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">407</span>             <span class="c1"># A GUI class may be need to update a window using this draw, so</span>
-<span class="g g-Whitespace">    </span><span class="mi">408</span>             <span class="c1"># don&#39;t forget to call the superclass.</span>
+/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/matplotlib/pyplot.py in hist(x, bins, range, density, weights, cumulative, bottom, histtype, align, orientation, rwidth, log, color, label, stacked, data, **kwargs)
+   2851         orientation=&#39;vertical&#39;, rwidth=None, log=False, color=None,
+   2852         label=None, stacked=False, *, data=None, **kwargs):
+-&gt; 2853     return gca().hist(
+   2854         x, bins=bins, range=range, density=density, weights=weights,
+   2855         cumulative=cumulative, bottom=bottom, histtype=histtype,
 
-<span class="nn">/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/matplotlib/artist.py</span> in <span class="ni">draw_wrapper</span><span class="nt">(artist, renderer, *args, **kwargs)</span>
-<span class="g g-Whitespace">     </span><span class="mi">72</span>     <span class="nd">@wraps</span><span class="p">(</span><span class="n">draw</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">73</span>     <span class="k">def</span> <span class="nf">draw_wrapper</span><span class="p">(</span><span class="n">artist</span><span class="p">,</span> <span class="n">renderer</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-<span class="ne">---&gt; </span><span class="mi">74</span>         <span class="n">result</span> <span class="o">=</span> <span class="n">draw</span><span class="p">(</span><span class="n">artist</span><span class="p">,</span> <span class="n">renderer</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">75</span>         <span class="k">if</span> <span class="n">renderer</span><span class="o">.</span><span class="n">_rasterizing</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">76</span>             <span class="n">renderer</span><span class="o">.</span><span class="n">stop_rasterizing</span><span class="p">()</span>
+/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/matplotlib/__init__.py in inner(ax, data, *args, **kwargs)
+   1359     def inner(ax, *args, data=None, **kwargs):
+   1360         if data is None:
+-&gt; 1361             return func(ax, *map(sanitize_sequence, args), **kwargs)
+   1362 
+   1363         bound = new_sig.bind(ax, *args, **kwargs)
 
-<span class="nn">/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/matplotlib/artist.py</span> in <span class="ni">draw_wrapper</span><span class="nt">(artist, renderer, *args, **kwargs)</span>
-<span class="g g-Whitespace">     </span><span class="mi">49</span>                 <span class="n">renderer</span><span class="o">.</span><span class="n">start_filter</span><span class="p">()</span>
-<span class="g g-Whitespace">     </span><span class="mi">50</span> 
-<span class="ne">---&gt; </span><span class="mi">51</span>             <span class="k">return</span> <span class="n">draw</span><span class="p">(</span><span class="n">artist</span><span class="p">,</span> <span class="n">renderer</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">52</span>         <span class="k">finally</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">53</span>             <span class="k">if</span> <span class="n">artist</span><span class="o">.</span><span class="n">get_agg_filter</span><span class="p">()</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/matplotlib/axes/_axes.py in hist(self, x, bins, range, density, weights, cumulative, bottom, histtype, align, orientation, rwidth, log, color, label, stacked, **kwargs)
+   6816                 else:
+   6817                     height = m
+-&gt; 6818                 bars = _barfunc(bins[:-1]+boffset, height, width,
+   6819                                 align=&#39;center&#39;, log=log,
+   6820                                 color=c, **{bottom_kwarg: bottom})
 
-<span class="nn">/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/matplotlib/figure.py</span> in <span class="ni">draw</span><span class="nt">(self, renderer)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2788</span> 
-<span class="g g-Whitespace">   </span><span class="mi">2789</span>             <span class="bp">self</span><span class="o">.</span><span class="n">patch</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">renderer</span><span class="p">)</span>
-<span class="ne">-&gt; </span><span class="mi">2790</span>             <span class="n">mimage</span><span class="o">.</span><span class="n">_draw_list_compositing_images</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">2791</span>                 <span class="n">renderer</span><span class="p">,</span> <span class="bp">self</span><span class="p">,</span> <span class="n">artists</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">suppressComposite</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2792</span> 
+/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/matplotlib/__init__.py in inner(ax, data, *args, **kwargs)
+   1359     def inner(ax, *args, data=None, **kwargs):
+   1360         if data is None:
+-&gt; 1361             return func(ax, *map(sanitize_sequence, args), **kwargs)
+   1362 
+   1363         bound = new_sig.bind(ax, *args, **kwargs)
 
-<span class="nn">/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/matplotlib/image.py</span> in <span class="ni">_draw_list_compositing_images</span><span class="nt">(renderer, parent, artists, suppress_composite)</span>
-<span class="g g-Whitespace">    </span><span class="mi">130</span>     <span class="k">if</span> <span class="n">not_composite</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">has_images</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">131</span>         <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">artists</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">132</span>             <span class="n">a</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">renderer</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">133</span>     <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">134</span>         <span class="c1"># Composite any adjacent images together</span>
+/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/matplotlib/axes/_axes.py in bar(self, x, height, width, bottom, align, **kwargs)
+   2369             elif orientation == &#39;horizontal&#39;:
+   2370                 r.sticky_edges.x.append(l)
+-&gt; 2371             self.add_patch(r)
+   2372             patches.append(r)
+   2373 
 
-<span class="nn">/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/matplotlib/artist.py</span> in <span class="ni">draw_wrapper</span><span class="nt">(artist, renderer, *args, **kwargs)</span>
-<span class="g g-Whitespace">     </span><span class="mi">49</span>                 <span class="n">renderer</span><span class="o">.</span><span class="n">start_filter</span><span class="p">()</span>
-<span class="g g-Whitespace">     </span><span class="mi">50</span> 
-<span class="ne">---&gt; </span><span class="mi">51</span>             <span class="k">return</span> <span class="n">draw</span><span class="p">(</span><span class="n">artist</span><span class="p">,</span> <span class="n">renderer</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">52</span>         <span class="k">finally</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">53</span>             <span class="k">if</span> <span class="n">artist</span><span class="o">.</span><span class="n">get_agg_filter</span><span class="p">()</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/matplotlib/axes/_base.py in add_patch(self, p)
+   2168         if p.get_clip_path() is None:
+   2169             p.set_clip_path(self.patch)
+-&gt; 2170         self._update_patch_limits(p)
+   2171         self.patches.append(p)
+   2172         p._remove_method = self.patches.remove
 
-<span class="nn">/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/matplotlib/_api/deprecation.py</span> in <span class="ni">wrapper</span><span class="nt">(*inner_args, **inner_kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">429</span>                          <span class="k">else</span> <span class="n">deprecation_addendum</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">430</span>                 <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">431</span>         <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">inner_args</span><span class="p">,</span> <span class="o">**</span><span class="n">inner_kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">432</span> 
-<span class="g g-Whitespace">    </span><span class="mi">433</span>     <span class="k">return</span> <span class="n">wrapper</span>
+/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/matplotlib/axes/_base.py in _update_patch_limits(self, patch)
+   2190             p.codes, (mpath.Path.CLOSEPOLY, mpath.Path.STOP), invert=True)]
+   2191         if vertices.size &gt; 0:
+-&gt; 2192             xys = patch.get_patch_transform().transform(vertices)
+   2193             if patch.get_data_transform() != self.transData:
+   2194                 patch_to_data = (patch.get_data_transform() -
 
-<span class="nn">/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/matplotlib/axes/_base.py</span> in <span class="ni">draw</span><span class="nt">(self, renderer, inframe)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2919</span>             <span class="n">renderer</span><span class="o">.</span><span class="n">stop_rasterizing</span><span class="p">()</span>
-<span class="g g-Whitespace">   </span><span class="mi">2920</span> 
-<span class="ne">-&gt; </span><span class="mi">2921</span>         <span class="n">mimage</span><span class="o">.</span><span class="n">_draw_list_compositing_images</span><span class="p">(</span><span class="n">renderer</span><span class="p">,</span> <span class="bp">self</span><span class="p">,</span> <span class="n">artists</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2922</span> 
-<span class="g g-Whitespace">   </span><span class="mi">2923</span>         <span class="n">renderer</span><span class="o">.</span><span class="n">close_group</span><span class="p">(</span><span class="s1">&#39;axes&#39;</span><span class="p">)</span>
+/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/matplotlib/patches.py in get_patch_transform(self)
+    777         bbox = self.get_bbox()
+    778         return (transforms.BboxTransformTo(bbox)
+--&gt; 779                 + transforms.Affine2D().rotate_deg_around(
+    780                     bbox.x0, bbox.y0, self.angle))
+    781 
 
-<span class="nn">/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/matplotlib/image.py</span> in <span class="ni">_draw_list_compositing_images</span><span class="nt">(renderer, parent, artists, suppress_composite)</span>
-<span class="g g-Whitespace">    </span><span class="mi">130</span>     <span class="k">if</span> <span class="n">not_composite</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">has_images</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">131</span>         <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">artists</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">132</span>             <span class="n">a</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">renderer</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">133</span>     <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">134</span>         <span class="c1"># Composite any adjacent images together</span>
+/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/matplotlib/transforms.py in rotate_deg_around(self, x, y, degrees)
+   2000         # Cast to float to avoid wraparound issues with uint8&#39;s
+   2001         x, y = float(x), float(y)
+-&gt; 2002         return self.translate(-x, -y).rotate_deg(degrees).translate(x, y)
+   2003 
+   2004     def translate(self, tx, ty):
 
-<span class="nn">/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/matplotlib/artist.py</span> in <span class="ni">draw_wrapper</span><span class="nt">(artist, renderer, *args, **kwargs)</span>
-<span class="g g-Whitespace">     </span><span class="mi">49</span>                 <span class="n">renderer</span><span class="o">.</span><span class="n">start_filter</span><span class="p">()</span>
-<span class="g g-Whitespace">     </span><span class="mi">50</span> 
-<span class="ne">---&gt; </span><span class="mi">51</span>             <span class="k">return</span> <span class="n">draw</span><span class="p">(</span><span class="n">artist</span><span class="p">,</span> <span class="n">renderer</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">52</span>         <span class="k">finally</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">53</span>             <span class="k">if</span> <span class="n">artist</span><span class="o">.</span><span class="n">get_agg_filter</span><span class="p">()</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/matplotlib/transforms.py in rotate_deg(self, degrees)
+   1978         and :meth:`scale`.
+   1979         &quot;&quot;&quot;
+-&gt; 1980         return self.rotate(math.radians(degrees))
+   1981 
+   1982     def rotate_around(self, x, y, theta):
 
-<span class="nn">/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/matplotlib/patches.py</span> in <span class="ni">draw</span><span class="nt">(self, renderer)</span>
-<span class="g g-Whitespace">    </span><span class="mi">605</span>                 <span class="bp">self</span><span class="o">.</span><span class="n">_bind_draw_path_function</span><span class="p">(</span><span class="n">renderer</span><span class="p">)</span> <span class="k">as</span> <span class="n">draw_path</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">606</span>             <span class="n">path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_path</span><span class="p">()</span>
-<span class="ne">--&gt; </span><span class="mi">607</span>             <span class="n">transform</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_transform</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">608</span>             <span class="n">tpath</span> <span class="o">=</span> <span class="n">transform</span><span class="o">.</span><span class="n">transform_path_non_affine</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">609</span>             <span class="n">affine</span> <span class="o">=</span> <span class="n">transform</span><span class="o">.</span><span class="n">get_affine</span><span class="p">()</span>
+/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/matplotlib/transforms.py in rotate(self, theta)
+   1963         &quot;&quot;&quot;
+   1964         a = math.cos(theta)
+-&gt; 1965         b = math.sin(theta)
+   1966         rotate_mtx = np.array([[a, -b, 0.0], [b, a, 0.0], [0.0, 0.0, 1.0]],
+   1967                               float)
 
-<span class="nn">/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/matplotlib/patches.py</span> in <span class="ni">get_transform</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">271</span>     <span class="k">def</span> <span class="nf">get_transform</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">272</span>         <span class="sd">&quot;&quot;&quot;Return the `~.transforms.Transform` applied to the `Patch`.&quot;&quot;&quot;</span>
-<span class="ne">--&gt; </span><span class="mi">273</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_patch_transform</span><span class="p">()</span> <span class="o">+</span> <span class="n">artist</span><span class="o">.</span><span class="n">Artist</span><span class="o">.</span><span class="n">get_transform</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">274</span> 
-<span class="g g-Whitespace">    </span><span class="mi">275</span>     <span class="k">def</span> <span class="nf">get_data_transform</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-
-<span class="nn">/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/matplotlib/patches.py</span> in <span class="ni">get_patch_transform</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">775</span>         <span class="c1"># important to call the accessor method and not directly access the</span>
-<span class="g g-Whitespace">    </span><span class="mi">776</span>         <span class="c1"># transformation member variable.</span>
-<span class="ne">--&gt; </span><span class="mi">777</span>         <span class="n">bbox</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_bbox</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">778</span>         <span class="k">return</span> <span class="p">(</span><span class="n">transforms</span><span class="o">.</span><span class="n">BboxTransformTo</span><span class="p">(</span><span class="n">bbox</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">779</span>                 <span class="o">+</span> <span class="n">transforms</span><span class="o">.</span><span class="n">Affine2D</span><span class="p">()</span><span class="o">.</span><span class="n">rotate_deg_around</span><span class="p">(</span>
-
-<span class="nn">/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/matplotlib/patches.py</span> in <span class="ni">get_bbox</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">854</span>     <span class="k">def</span> <span class="nf">get_bbox</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">855</span>         <span class="sd">&quot;&quot;&quot;Return the `.Bbox`.&quot;&quot;&quot;</span>
-<span class="ne">--&gt; </span><span class="mi">856</span>         <span class="n">x0</span><span class="p">,</span> <span class="n">y0</span><span class="p">,</span> <span class="n">x1</span><span class="p">,</span> <span class="n">y1</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_convert_units</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">857</span>         <span class="k">return</span> <span class="n">transforms</span><span class="o">.</span><span class="n">Bbox</span><span class="o">.</span><span class="n">from_extents</span><span class="p">(</span><span class="n">x0</span><span class="p">,</span> <span class="n">y0</span><span class="p">,</span> <span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">858</span> 
-
-<span class="nn">/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/matplotlib/patches.py</span> in <span class="ni">_convert_units</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">767</span>         <span class="n">y0</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">convert_yunits</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_y0</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">768</span>         <span class="n">x1</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">convert_xunits</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_x0</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">_width</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">769</span>         <span class="n">y1</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">convert_yunits</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_y0</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">_height</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">770</span>         <span class="k">return</span> <span class="n">x0</span><span class="p">,</span> <span class="n">y0</span><span class="p">,</span> <span class="n">x1</span><span class="p">,</span> <span class="n">y1</span>
-<span class="g g-Whitespace">    </span><span class="mi">771</span> 
-
-<span class="nn">/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/matplotlib/artist.py</span> in <span class="ni">convert_yunits</span><span class="nt">(self, y)</span>
-<span class="g g-Whitespace">    </span><span class="mi">213</span>         <span class="k">if</span> <span class="n">ax</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">214</span>             <span class="k">return</span> <span class="n">y</span>
-<span class="ne">--&gt; </span><span class="mi">215</span>         <span class="k">return</span> <span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">convert_units</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">216</span> 
-<span class="g g-Whitespace">    </span><span class="mi">217</span>     <span class="nd">@property</span>
-
-<span class="ne">KeyboardInterrupt</span>: 
+KeyboardInterrupt: 
 </pre></div>
 </div>
 </div>
