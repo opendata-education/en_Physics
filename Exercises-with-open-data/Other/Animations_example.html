@@ -370,7 +370,7 @@
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>---------------------------------------------------------------------------
 KeyboardInterrupt                         Traceback (most recent call last)
-/tmp/ipykernel_1985/2216979451.py in &lt;module&gt;
+/tmp/ipykernel_2106/2216979451.py in &lt;module&gt;
       7 
       8 # anim.to_jshtml() changes the animation to (javascript)html, so it can be shown on Notebook
 ----&gt; 9 HTML(anim.to_jshtml())
@@ -390,101 +390,137 @@ KeyboardInterrupt                         Traceback (most recent call last)
    1175                         progress_callback(frame_number, total_frames)
 
 /opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/matplotlib/animation.py in _draw_next_frame(self, framedata, blit)
-   1206         # post- draw, as well as the drawing of the frame itself.
    1207         self._pre_draw(framedata, blit)
--&gt; 1208         self._draw_frame(framedata)
-   1209         self._post_draw(framedata, blit)
+   1208         self._draw_frame(framedata)
+-&gt; 1209         self._post_draw(framedata, blit)
    1210 
+   1211     def _init_draw(self):
 
-/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/matplotlib/animation.py in _draw_frame(self, framedata)
-   1774         # Call the func with framedata and args. If blitting is desired,
-   1775         # func needs to return a sequence of any artists that were modified.
--&gt; 1776         self._drawn_artists = self._func(framedata, *self._args)
-   1777 
-   1778         if self._blit:
+/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/matplotlib/animation.py in _post_draw(self, framedata, blit)
+   1232             self._blit_draw(self._drawn_artists)
+   1233         else:
+-&gt; 1234             self._fig.canvas.draw_idle()
+   1235 
+   1236     # The rest of the code in this class is to facilitate easy blitting
 
-/tmp/ipykernel_1985/3120148125.py in updt_hist(num, iMass)
-      8     axes.set_ylim(0,8000)
-      9     axes.set_xlim(0,200)
----&gt; 10     plt.hist(iMass[:num*480], bins = 350)
-     11 
+/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/matplotlib/backend_bases.py in draw_idle(self, *args, **kwargs)
+   2053         if not self._is_idle_drawing:
+   2054             with self._idle_draw_cntx():
+-&gt; 2055                 self.draw(*args, **kwargs)
+   2056 
+   2057     def get_width_height(self):
 
-/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/matplotlib/pyplot.py in hist(x, bins, range, density, weights, cumulative, bottom, histtype, align, orientation, rwidth, log, color, label, stacked, data, **kwargs)
-   2851         orientation=&#39;vertical&#39;, rwidth=None, log=False, color=None,
-   2852         label=None, stacked=False, *, data=None, **kwargs):
--&gt; 2853     return gca().hist(
-   2854         x, bins=bins, range=range, density=density, weights=weights,
-   2855         cumulative=cumulative, bottom=bottom, histtype=histtype,
+/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/matplotlib/backends/backend_agg.py in draw(self)
+    404              (self.toolbar._wait_cursor_for_draw_cm() if self.toolbar
+    405               else nullcontext()):
+--&gt; 406             self.figure.draw(self.renderer)
+    407             # A GUI class may be need to update a window using this draw, so
+    408             # don&#39;t forget to call the superclass.
 
-/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/matplotlib/__init__.py in inner(ax, data, *args, **kwargs)
-   1359     def inner(ax, *args, data=None, **kwargs):
-   1360         if data is None:
--&gt; 1361             return func(ax, *map(sanitize_sequence, args), **kwargs)
-   1362 
-   1363         bound = new_sig.bind(ax, *args, **kwargs)
+/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/matplotlib/artist.py in draw_wrapper(artist, renderer, *args, **kwargs)
+     72     @wraps(draw)
+     73     def draw_wrapper(artist, renderer, *args, **kwargs):
+---&gt; 74         result = draw(artist, renderer, *args, **kwargs)
+     75         if renderer._rasterizing:
+     76             renderer.stop_rasterizing()
 
-/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/matplotlib/axes/_axes.py in hist(self, x, bins, range, density, weights, cumulative, bottom, histtype, align, orientation, rwidth, log, color, label, stacked, **kwargs)
-   6816                 else:
-   6817                     height = m
--&gt; 6818                 bars = _barfunc(bins[:-1]+boffset, height, width,
-   6819                                 align=&#39;center&#39;, log=log,
-   6820                                 color=c, **{bottom_kwarg: bottom})
+/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/matplotlib/artist.py in draw_wrapper(artist, renderer, *args, **kwargs)
+     49                 renderer.start_filter()
+     50 
+---&gt; 51             return draw(artist, renderer, *args, **kwargs)
+     52         finally:
+     53             if artist.get_agg_filter() is not None:
 
-/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/matplotlib/__init__.py in inner(ax, data, *args, **kwargs)
-   1359     def inner(ax, *args, data=None, **kwargs):
-   1360         if data is None:
--&gt; 1361             return func(ax, *map(sanitize_sequence, args), **kwargs)
-   1362 
-   1363         bound = new_sig.bind(ax, *args, **kwargs)
+/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/matplotlib/figure.py in draw(self, renderer)
+   2788 
+   2789             self.patch.draw(renderer)
+-&gt; 2790             mimage._draw_list_compositing_images(
+   2791                 renderer, self, artists, self.suppressComposite)
+   2792 
 
-/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/matplotlib/axes/_axes.py in bar(self, x, height, width, bottom, align, **kwargs)
-   2369             elif orientation == &#39;horizontal&#39;:
-   2370                 r.sticky_edges.x.append(l)
--&gt; 2371             self.add_patch(r)
-   2372             patches.append(r)
-   2373 
+/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/matplotlib/image.py in _draw_list_compositing_images(renderer, parent, artists, suppress_composite)
+    130     if not_composite or not has_images:
+    131         for a in artists:
+--&gt; 132             a.draw(renderer)
+    133     else:
+    134         # Composite any adjacent images together
 
-/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/matplotlib/axes/_base.py in add_patch(self, p)
-   2168         if p.get_clip_path() is None:
-   2169             p.set_clip_path(self.patch)
--&gt; 2170         self._update_patch_limits(p)
-   2171         self.patches.append(p)
-   2172         p._remove_method = self.patches.remove
+/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/matplotlib/artist.py in draw_wrapper(artist, renderer, *args, **kwargs)
+     49                 renderer.start_filter()
+     50 
+---&gt; 51             return draw(artist, renderer, *args, **kwargs)
+     52         finally:
+     53             if artist.get_agg_filter() is not None:
 
-/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/matplotlib/axes/_base.py in _update_patch_limits(self, patch)
-   2190             p.codes, (mpath.Path.CLOSEPOLY, mpath.Path.STOP), invert=True)]
-   2191         if vertices.size &gt; 0:
--&gt; 2192             xys = patch.get_patch_transform().transform(vertices)
-   2193             if patch.get_data_transform() != self.transData:
-   2194                 patch_to_data = (patch.get_data_transform() -
+/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/matplotlib/_api/deprecation.py in wrapper(*inner_args, **inner_kwargs)
+    429                          else deprecation_addendum,
+    430                 **kwargs)
+--&gt; 431         return func(*inner_args, **inner_kwargs)
+    432 
+    433     return wrapper
+
+/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/matplotlib/axes/_base.py in draw(self, renderer, inframe)
+   2919             renderer.stop_rasterizing()
+   2920 
+-&gt; 2921         mimage._draw_list_compositing_images(renderer, self, artists)
+   2922 
+   2923         renderer.close_group(&#39;axes&#39;)
+
+/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/matplotlib/image.py in _draw_list_compositing_images(renderer, parent, artists, suppress_composite)
+    130     if not_composite or not has_images:
+    131         for a in artists:
+--&gt; 132             a.draw(renderer)
+    133     else:
+    134         # Composite any adjacent images together
+
+/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/matplotlib/artist.py in draw_wrapper(artist, renderer, *args, **kwargs)
+     49                 renderer.start_filter()
+     50 
+---&gt; 51             return draw(artist, renderer, *args, **kwargs)
+     52         finally:
+     53             if artist.get_agg_filter() is not None:
+
+/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/matplotlib/patches.py in draw(self, renderer)
+    605                 self._bind_draw_path_function(renderer) as draw_path:
+    606             path = self.get_path()
+--&gt; 607             transform = self.get_transform()
+    608             tpath = transform.transform_path_non_affine(path)
+    609             affine = transform.get_affine()
+
+/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/matplotlib/patches.py in get_transform(self)
+    271     def get_transform(self):
+    272         &quot;&quot;&quot;Return the `~.transforms.Transform` applied to the `Patch`.&quot;&quot;&quot;
+--&gt; 273         return self.get_patch_transform() + artist.Artist.get_transform(self)
+    274 
+    275     def get_data_transform(self):
 
 /opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/matplotlib/patches.py in get_patch_transform(self)
+    776         # transformation member variable.
     777         bbox = self.get_bbox()
-    778         return (transforms.BboxTransformTo(bbox)
---&gt; 779                 + transforms.Affine2D().rotate_deg_around(
+--&gt; 778         return (transforms.BboxTransformTo(bbox)
+    779                 + transforms.Affine2D().rotate_deg_around(
     780                     bbox.x0, bbox.y0, self.angle))
-    781 
 
-/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/matplotlib/transforms.py in rotate_deg_around(self, x, y, degrees)
-   2000         # Cast to float to avoid wraparound issues with uint8&#39;s
-   2001         x, y = float(x), float(y)
--&gt; 2002         return self.translate(-x, -y).rotate_deg(degrees).translate(x, y)
-   2003 
-   2004     def translate(self, tx, ty):
+/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/matplotlib/transforms.py in __add__(self, other)
+   1320         ``C.transform(x) == B.transform(A.transform(x))``.
+   1321         &quot;&quot;&quot;
+-&gt; 1322         return (composite_transform_factory(self, other)
+   1323                 if isinstance(other, Transform) else
+   1324                 NotImplemented)
 
-/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/matplotlib/transforms.py in rotate_deg(self, degrees)
-   1978         and :meth:`scale`.
-   1979         &quot;&quot;&quot;
--&gt; 1980         return self.rotate(math.radians(degrees))
-   1981 
-   1982     def rotate_around(self, x, y, theta):
+/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/matplotlib/transforms.py in composite_transform_factory(a, b)
+   2490     elif isinstance(a, Affine2D) and isinstance(b, Affine2D):
+   2491         return CompositeAffine2D(a, b)
+-&gt; 2492     return CompositeGenericTransform(a, b)
+   2493 
+   2494 
 
-/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/matplotlib/transforms.py in rotate(self, theta)
-   1963         &quot;&quot;&quot;
-   1964         a = math.cos(theta)
--&gt; 1965         b = math.sin(theta)
-   1966         rotate_mtx = np.array([[a, -b, 0.0], [b, a, 0.0], [0.0, 0.0, 1.0]],
-   1967                               float)
+/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/matplotlib/transforms.py in __init__(self, a, b, **kwargs)
+   2322                              &quot;the input dimensions of &#39;b&#39;&quot;)
+   2323         self.input_dims = a.input_dims
+-&gt; 2324         self.output_dims = b.output_dims
+   2325 
+   2326         super().__init__(**kwargs)
 
 KeyboardInterrupt: 
 </pre></div>
