@@ -311,73 +311,172 @@ Possible error messages will appear in pink and will indicate information regard
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1968</span><span class="o">/</span><span class="mf">3002554994.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">dataset</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../../Data/Dimuon_DoubleMu.csv&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> 
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">dataset</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-<span class="nn">/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/pandas/util/_decorators.py</span> in <span class="ni">wrapper</span><span class="nt">(*args, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">309</span>                     <span class="n">stacklevel</span><span class="o">=</span><span class="n">stacklevel</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">310</span>                 <span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">311</span>             <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">312</span> 
-<span class="g g-Whitespace">    </span><span class="mi">313</span>         <span class="k">return</span> <span class="n">wrapper</span>
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
 
-<span class="nn">/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/pandas/io/parsers/readers.py</span> in <span class="ni">read_csv</span><span class="nt">(filepath_or_buffer, sep, delimiter, header, names, index_col, usecols, squeeze, prefix, mangle_dupe_cols, dtype, engine, converters, true_values, false_values, skipinitialspace, skiprows, skipfooter, nrows, na_values, keep_default_na, na_filter, verbose, skip_blank_lines, parse_dates, infer_datetime_format, keep_date_col, date_parser, dayfirst, cache_dates, iterator, chunksize, compression, thousands, decimal, lineterminator, quotechar, quoting, doublequote, escapechar, comment, encoding, encoding_errors, dialect, error_bad_lines, warn_bad_lines, on_bad_lines, delim_whitespace, low_memory, memory_map, float_precision, storage_options)</span>
-<span class="g g-Whitespace">    </span><span class="mi">584</span>     <span class="n">kwds</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">kwds_defaults</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">585</span> 
-<span class="ne">--&gt; </span><span class="mi">586</span>     <span class="k">return</span> <span class="n">_read</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="n">kwds</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">587</span> 
-<span class="g g-Whitespace">    </span><span class="mi">588</span> 
-
-<span class="nn">/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/pandas/io/parsers/readers.py</span> in <span class="ni">_read</span><span class="nt">(filepath_or_buffer, kwds)</span>
-<span class="g g-Whitespace">    </span><span class="mi">480</span> 
-<span class="g g-Whitespace">    </span><span class="mi">481</span>     <span class="c1"># Create the parser.</span>
-<span class="ne">--&gt; </span><span class="mi">482</span>     <span class="n">parser</span> <span class="o">=</span> <span class="n">TextFileReader</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">483</span> 
-<span class="g g-Whitespace">    </span><span class="mi">484</span>     <span class="k">if</span> <span class="n">chunksize</span> <span class="ow">or</span> <span class="n">iterator</span><span class="p">:</span>
-
-<span class="nn">/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/pandas/io/parsers/readers.py</span> in <span class="ni">__init__</span><span class="nt">(self, f, engine, **kwds)</span>
-<span class="g g-Whitespace">    </span><span class="mi">809</span>             <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">[</span><span class="s2">&quot;has_index_names&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">kwds</span><span class="p">[</span><span class="s2">&quot;has_index_names&quot;</span><span class="p">]</span>
-<span class="g g-Whitespace">    </span><span class="mi">810</span> 
-<span class="ne">--&gt; </span><span class="mi">811</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_make_engine</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">engine</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">812</span> 
-<span class="g g-Whitespace">    </span><span class="mi">813</span>     <span class="k">def</span> <span class="nf">close</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-
-<span class="nn">/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/pandas/io/parsers/readers.py</span> in <span class="ni">_make_engine</span><span class="nt">(self, engine)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1038</span>             <span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1039</span>         <span class="c1"># error: Too many arguments for &quot;ParserBase&quot;</span>
-<span class="ne">-&gt; </span><span class="mi">1040</span>         <span class="k">return</span> <span class="n">mapping</span><span class="p">[</span><span class="n">engine</span><span class="p">](</span><span class="bp">self</span><span class="o">.</span><span class="n">f</span><span class="p">,</span> <span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">)</span>  <span class="c1"># type: ignore[call-arg]</span>
-<span class="g g-Whitespace">   </span><span class="mi">1041</span> 
-<span class="g g-Whitespace">   </span><span class="mi">1042</span>     <span class="k">def</span> <span class="nf">_failover_to_python</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-
-<span class="nn">/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/pandas/io/parsers/c_parser_wrapper.py</span> in <span class="ni">__init__</span><span class="nt">(self, src, **kwds)</span>
-<span class="g g-Whitespace">     </span><span class="mi">49</span> 
-<span class="g g-Whitespace">     </span><span class="mi">50</span>         <span class="c1"># open handles</span>
-<span class="ne">---&gt; </span><span class="mi">51</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_open_handles</span><span class="p">(</span><span class="n">src</span><span class="p">,</span> <span class="n">kwds</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">52</span>         <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
-<span class="g g-Whitespace">     </span><span class="mi">53</span> 
-
-<span class="nn">/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/pandas/io/parsers/base_parser.py</span> in <span class="ni">_open_handles</span><span class="nt">(self, src, kwds)</span>
-<span class="g g-Whitespace">    </span><span class="mi">220</span>         <span class="n">Let</span> <span class="n">the</span> <span class="n">readers</span> <span class="nb">open</span> <span class="n">IOHandles</span> <span class="n">after</span> <span class="n">they</span> <span class="n">are</span> <span class="n">done</span> <span class="k">with</span> <span class="n">their</span> <span class="n">potential</span> <span class="n">raises</span><span class="o">.</span>
-<span class="g g-Whitespace">    </span><span class="mi">221</span>         <span class="s2">&quot;&quot;&quot;</span>
-<span class="ne">--&gt; </span><span class="mi">222</span><span class="s2">         self.handles = get_handle(</span>
-<span class="g g-Whitespace">    </span><span class="mi">223</span><span class="s2">             src,</span>
-<span class="g g-Whitespace">    </span><span class="mi">224</span><span class="s2">             &quot;r&quot;,</span>
-
-<span class="nn">/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/pandas/io/common.py</span> in <span class="ni">get_handle</span><span class="nt">(path_or_buf, mode, encoding, compression, memory_map, is_text, errors, storage_options)</span>
-<span class="g g-Whitespace">    </span><span class="mi">699</span><span class="s2">         if ioargs.encoding and &quot;b&quot; not in ioargs.mode:</span>
-<span class="g g-Whitespace">    </span><span class="mi">700</span><span class="s2">             # Encoding</span>
-<span class="ne">--&gt; </span><span class="mi">701</span><span class="s2">             handle = open(</span>
-<span class="g g-Whitespace">    </span><span class="mi">702</span><span class="s2">                 handle,</span>
-<span class="g g-Whitespace">    </span><span class="mi">703</span><span class="s2">                 ioargs.mode,</span>
-
-<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;../../Data/Dimuon_DoubleMu.csv&#39;
-</pre></div>
-</div>
-</div>
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Run</th>
+      <th>Event</th>
+      <th>type1</th>
+      <th>E1</th>
+      <th>px1</th>
+      <th>py1</th>
+      <th>pz1</th>
+      <th>pt1</th>
+      <th>eta1</th>
+      <th>phi1</th>
+      <th>...</th>
+      <th>type2</th>
+      <th>E2</th>
+      <th>px2</th>
+      <th>py2</th>
+      <th>pz2</th>
+      <th>pt2</th>
+      <th>eta2</th>
+      <th>phi2</th>
+      <th>Q2</th>
+      <th>M</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>165617</td>
+      <td>74601703</td>
+      <td>G</td>
+      <td>9.6987</td>
+      <td>-9.5104</td>
+      <td>0.3662</td>
+      <td>1.8633</td>
+      <td>9.5175</td>
+      <td>0.1945</td>
+      <td>3.1031</td>
+      <td>...</td>
+      <td>G</td>
+      <td>9.7633</td>
+      <td>7.3277</td>
+      <td>-1.1524</td>
+      <td>6.3473</td>
+      <td>7.4178</td>
+      <td>0.7756</td>
+      <td>-0.1560</td>
+      <td>1</td>
+      <td>17.4922</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>165617</td>
+      <td>75100943</td>
+      <td>G</td>
+      <td>6.2039</td>
+      <td>-4.2666</td>
+      <td>0.4565</td>
+      <td>-4.4793</td>
+      <td>4.2910</td>
+      <td>-0.9121</td>
+      <td>3.0350</td>
+      <td>...</td>
+      <td>G</td>
+      <td>9.6690</td>
+      <td>7.2740</td>
+      <td>-2.8211</td>
+      <td>-5.7104</td>
+      <td>7.8019</td>
+      <td>-0.6786</td>
+      <td>-0.3700</td>
+      <td>1</td>
+      <td>11.5534</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>165617</td>
+      <td>75587682</td>
+      <td>G</td>
+      <td>19.2892</td>
+      <td>-4.2121</td>
+      <td>-0.6516</td>
+      <td>18.8121</td>
+      <td>4.2622</td>
+      <td>2.1905</td>
+      <td>-2.9881</td>
+      <td>...</td>
+      <td>G</td>
+      <td>9.8244</td>
+      <td>4.3439</td>
+      <td>-0.4735</td>
+      <td>8.7985</td>
+      <td>4.3697</td>
+      <td>1.4497</td>
+      <td>-0.1086</td>
+      <td>1</td>
+      <td>9.1636</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>165617</td>
+      <td>75660978</td>
+      <td>G</td>
+      <td>7.0427</td>
+      <td>-6.3268</td>
+      <td>-0.2685</td>
+      <td>3.0802</td>
+      <td>6.3325</td>
+      <td>0.4690</td>
+      <td>-3.0992</td>
+      <td>...</td>
+      <td>G</td>
+      <td>5.5857</td>
+      <td>4.4748</td>
+      <td>0.8489</td>
+      <td>-3.2319</td>
+      <td>4.5546</td>
+      <td>-0.6605</td>
+      <td>0.1875</td>
+      <td>1</td>
+      <td>12.4774</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>165617</td>
+      <td>75947690</td>
+      <td>G</td>
+      <td>7.2751</td>
+      <td>0.1030</td>
+      <td>-5.5331</td>
+      <td>-4.7212</td>
+      <td>5.5340</td>
+      <td>-0.7736</td>
+      <td>-1.5522</td>
+      <td>...</td>
+      <td>G</td>
+      <td>7.3181</td>
+      <td>-0.3988</td>
+      <td>6.9408</td>
+      <td>2.2825</td>
+      <td>6.9523</td>
+      <td>0.3227</td>
+      <td>1.6282</td>
+      <td>1</td>
+      <td>14.3159</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 21 columns</p>
+</div></div></div>
 </div>
 <p>In this example, the invariant mass is of particular interest. Save the invariant mass column from the <em>dataset</em> into a variable called <em>invariant_mass</em> by using the column heading as it appears in the table, e.g. <em>M</em>. If your dataset does not contain invariant masses by default you must first <a class="reference external" href="https://github.com/cms-opendata-education/cms-jupyter-materials-english/blob/master/Exercises-with-open-data/Calculate-invariant-mass.ipynb">calculate them</a>. Plot a histogram, stating which variable to plot, setting the number of bins and range.
 In the example below, we use 50 bins and plot from 0 to 200 GeV.</p>
@@ -391,17 +490,7 @@ In the example below, we use 50 bins and plot from 0 to 200 GeV.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1968</span><span class="o">/</span><span class="mf">3323880540.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">invariant_mass</span> <span class="o">=</span> <span class="n">dataset</span><span class="p">[</span><span class="s1">&#39;M&#39;</span><span class="p">]</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> 
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">invariant_mass</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="nb">range</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">200</span><span class="p">))</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-
-<span class="ne">NameError</span>: name &#39;dataset&#39; is not defined
-</pre></div>
-</div>
+<img alt="../../_images/Overlaid-histograms_6_0.png" src="../../_images/Overlaid-histograms_6_0.png" />
 </div>
 </div>
 <p>The number of bins and range can be varied in order to analyze the data more clearly. Below are commands to replot the graph with a title and axis labels.</p>
@@ -417,18 +506,7 @@ In the example below, we use 50 bins and plot from 0 to 200 GeV.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1968</span><span class="o">/</span><span class="mf">763375939.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;The histogram of the invariant masses of two muons </span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> 
-<span class="ne">----&gt; </span><span class="mi">5</span> <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">invariant_mass</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="nb">range</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">200</span><span class="p">))</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-
-<span class="ne">NameError</span>: name &#39;invariant_mass&#39; is not defined
-</pre></div>
-</div>
-<img alt="../../_images/Overlaid-histograms_8_1.png" src="../../_images/Overlaid-histograms_8_1.png" />
+<img alt="../../_images/Overlaid-histograms_8_0.png" src="../../_images/Overlaid-histograms_8_0.png" />
 </div>
 </div>
 <p>The graph above demonstrates background events below approximately 50 GeV and a peak at approximately 90 GeV.</p>
@@ -437,17 +515,6 @@ In the example below, we use 50 bins and plot from 0 to 200 GeV.</p>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">newsethighE</span> <span class="o">=</span> <span class="n">dataset</span><span class="p">[</span><span class="n">dataset</span><span class="o">.</span><span class="n">E1</span><span class="o">+</span><span class="n">dataset</span><span class="o">.</span><span class="n">E2</span><span class="o">&gt;</span><span class="mi">150</span><span class="p">]</span>
 <span class="n">newsetlowE</span> <span class="o">=</span> <span class="n">dataset</span><span class="p">[</span><span class="n">dataset</span><span class="o">.</span><span class="n">E1</span><span class="o">+</span><span class="n">dataset</span><span class="o">.</span><span class="n">E2</span><span class="o">&lt;</span><span class="mi">150</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1968</span><span class="o">/</span><span class="mf">3382591044.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">newsethighE</span> <span class="o">=</span> <span class="n">dataset</span><span class="p">[</span><span class="n">dataset</span><span class="o">.</span><span class="n">E1</span><span class="o">+</span><span class="n">dataset</span><span class="o">.</span><span class="n">E2</span><span class="o">&gt;</span><span class="mi">150</span><span class="p">]</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">newsetlowE</span> <span class="o">=</span> <span class="n">dataset</span><span class="p">[</span><span class="n">dataset</span><span class="o">.</span><span class="n">E1</span><span class="o">+</span><span class="n">dataset</span><span class="o">.</span><span class="n">E2</span><span class="o">&lt;</span><span class="mi">150</span><span class="p">]</span>
-
-<span class="ne">NameError</span>: name &#39;dataset&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -466,19 +533,7 @@ In the example below, we use 50 bins and plot from 0 to 200 GeV.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1968</span><span class="o">/</span><span class="mf">2141169281.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Number of events&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;The invariant masses of two muons comparing high and low energy</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="ne">----&gt; </span><span class="mi">4</span> <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">newsetlowE</span> <span class="p">[</span><span class="s1">&#39;M&#39;</span><span class="p">],</span> <span class="n">bins</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="nb">range</span><span class="o">=</span><span class="p">(</span><span class="mi">80</span><span class="p">,</span><span class="mi">100</span><span class="p">),</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Low E&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">newsethighE</span> <span class="p">[</span><span class="s1">&#39;M&#39;</span><span class="p">],</span> <span class="n">bins</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="nb">range</span><span class="o">=</span><span class="p">(</span><span class="mi">80</span><span class="p">,</span><span class="mi">100</span><span class="p">),</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;High E&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">plt</span><span class="o">.</span><span class="n">legend</span> <span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper right&#39;</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;newsetlowE&#39; is not defined
-</pre></div>
-</div>
-<img alt="../../_images/Overlaid-histograms_12_1.png" src="../../_images/Overlaid-histograms_12_1.png" />
+<img alt="../../_images/Overlaid-histograms_12_0.png" src="../../_images/Overlaid-histograms_12_0.png" />
 </div>
 </div>
 <p>What do you think will happen if you change the value of energy limit? Try it out by changing the limits in <em>newsethighE</em> and <em>newsetlowE</em>.</p>
