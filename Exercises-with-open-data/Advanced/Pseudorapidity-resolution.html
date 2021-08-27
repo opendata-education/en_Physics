@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Background &#8212; Physics</title>
+    <title>The effect of the pseudorapidity \(\eta\) on the resolution of the CMS detector &#8212; Physics</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet" />
   <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -164,7 +164,11 @@
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Background
+     The effect of the pseudorapidity
+     <span class="math notranslate nohighlight">
+      \(\eta\)
+     </span>
+     on the resolution of the CMS detector
     </a>
    </li>
   </ul>
@@ -273,74 +277,58 @@
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Background
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cms-detector">
+   CMS detector
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-effect-of-the-pseudorapidity-eta-on-the-resolution-of-the-cms-detector">
-   The effect of the pseudorapidity
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pseudorapidity">
+   Pseudorapidity
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-effect-of-pseudorapidity-on-the-resolution-of-the-measurement">
+   The effect of pseudorapidity on the resolution of the measurement
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#let-s-start">
+   Let’s start!
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#selecting-the-events">
+   1) Selecting the events
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#creating-the-histograms">
+   2) Creating the histograms
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#histogram-for-the-large-eta-events">
+   Histogram for the large
    <span class="math notranslate nohighlight">
     \(\eta\)
    </span>
-   on the resolution of the CMS detector
+   events
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#cms-detector">
-     CMS detector
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#pseudorapidity">
-     Pseudorapidity
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-effect-of-pseudorapidity-on-the-resolution-of-the-measurement">
-     The effect of pseudorapidity on the resolution of the measurement
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#let-s-start">
-     Let’s start!
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#selecting-the-events">
-     1) Selecting the events
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#creating-the-histograms">
-     2) Creating the histograms
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#histogram-for-the-large-eta-events">
-     Histogram for the large
-     <span class="math notranslate nohighlight">
-      \(\eta\)
-     </span>
-     events
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#histogram-for-the-small-eta-events">
-     Histogram for the small
-     <span class="math notranslate nohighlight">
-      \(\eta\)
-     </span>
-     events
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercise">
-     3) Exercise
-    </a>
-   </li>
-  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#histogram-for-the-small-eta-events">
+   Histogram for the small
+   <span class="math notranslate nohighlight">
+    \(\eta\)
+   </span>
+   events
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise">
+   3) Exercise
+  </a>
  </li>
 </ul>
 
@@ -353,10 +341,7 @@
         
               <div>
                 
-  <div class="section" id="background">
-<h1>Background<a class="headerlink" href="#background" title="Permalink to this headline">¶</a></h1>
-</div>
-<div class="section" id="the-effect-of-the-pseudorapidity-eta-on-the-resolution-of-the-cms-detector">
+  <div class="section" id="the-effect-of-the-pseudorapidity-eta-on-the-resolution-of-the-cms-detector">
 <h1>The effect of the pseudorapidity <span class="math notranslate nohighlight">\(\eta\)</span> on the resolution of the CMS detector<a class="headerlink" href="#the-effect-of-the-pseudorapidity-eta-on-the-resolution-of-the-cms-detector" title="Permalink to this headline">¶</a></h1>
 <p>In this excercise the CMS (Compact Muon Solenoid) detector and the concept of pseudorapidity are introduced. With the real data collected by CMS detector, the effect of the pseudorapidity on the resolution of the CMS detector is observed.</p>
 <div class="section" id="cms-detector">
@@ -478,7 +463,7 @@ The amount of events where the pseudorapidity of both muons is small = 603
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/Pseudorapidity-resolution_18_0.png" src="../../_images/Pseudorapidity-resolution_18_0.png" />
+<img alt="../../_images/Pseudorapidity-resolution_17_0.png" src="../../_images/Pseudorapidity-resolution_17_0.png" />
 </div>
 </div>
 </div>
@@ -510,7 +495,7 @@ The amount of events where the pseudorapidity of both muons is small = 603
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/Pseudorapidity-resolution_21_0.png" src="../../_images/Pseudorapidity-resolution_21_0.png" />
+<img alt="../../_images/Pseudorapidity-resolution_20_0.png" src="../../_images/Pseudorapidity-resolution_20_0.png" />
 </div>
 </div>
 </div>
