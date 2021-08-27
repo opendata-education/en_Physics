@@ -11,9 +11,9 @@ If you'd like to develop on and build this book, you should:
 - Clone this repository and run
 - Run `pip install -r requirements.txt` (it is recommended you do this within a virtual environment built using environment_win.yml)
 - (Recommended) Remove the existing `_build/` directory
-- Run `jupyter-book build contents/`
+- Run `jupyter-book build content/`
 
-A fully-rendered HTML version of the book will be built in `contents/_build/html/`.
+A fully-rendered HTML version of the book will be built in `content/_build/html/`.
 
 ### Hosting the book
 
@@ -22,7 +22,7 @@ The html version of the book is hosted on the `gh-pages` branch of this repo. A 
 If you wish to disable this automation, you may remove the GitHub actions workflow and build the book manually by:
 
 - Navigating to your local build; and running,
-- `ghp-import -n -p -f contents/_build/html`
+- `ghp-import -n -p -f content/_build/html`
 
 This will automatically push your build to the `gh-pages` branch. More information on this hosting process can be found [here](https://jupyterbook.org/publish/gh-pages.html#manually-host-your-book-with-github-pages).
 
