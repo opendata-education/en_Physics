@@ -307,76 +307,6 @@
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1919</span><span class="o">/</span><span class="mf">3384086015.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Data for later use.</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> 
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">csvs</span> <span class="o">=</span> <span class="p">[</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../../Data/4mu_2011.csv&#39;</span><span class="p">),</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../../Data/4e_2011.csv&#39;</span><span class="p">),</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../../Data/2e2mu_2011.csv&#39;</span><span class="p">)]</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">csvs</span> <span class="o">+=</span> <span class="p">[</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../../Data/4mu_2012.csv&#39;</span><span class="p">),</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../../Data/4e_2012.csv&#39;</span><span class="p">),</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../../Data/2e2mu_2012.csv&#39;</span><span class="p">)]</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> 
-
-<span class="nn">/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/pandas/util/_decorators.py</span> in <span class="ni">wrapper</span><span class="nt">(*args, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">309</span>                     <span class="n">stacklevel</span><span class="o">=</span><span class="n">stacklevel</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">310</span>                 <span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">311</span>             <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">312</span> 
-<span class="g g-Whitespace">    </span><span class="mi">313</span>         <span class="k">return</span> <span class="n">wrapper</span>
-
-<span class="nn">/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/pandas/io/parsers/readers.py</span> in <span class="ni">read_csv</span><span class="nt">(filepath_or_buffer, sep, delimiter, header, names, index_col, usecols, squeeze, prefix, mangle_dupe_cols, dtype, engine, converters, true_values, false_values, skipinitialspace, skiprows, skipfooter, nrows, na_values, keep_default_na, na_filter, verbose, skip_blank_lines, parse_dates, infer_datetime_format, keep_date_col, date_parser, dayfirst, cache_dates, iterator, chunksize, compression, thousands, decimal, lineterminator, quotechar, quoting, doublequote, escapechar, comment, encoding, encoding_errors, dialect, error_bad_lines, warn_bad_lines, on_bad_lines, delim_whitespace, low_memory, memory_map, float_precision, storage_options)</span>
-<span class="g g-Whitespace">    </span><span class="mi">584</span>     <span class="n">kwds</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">kwds_defaults</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">585</span> 
-<span class="ne">--&gt; </span><span class="mi">586</span>     <span class="k">return</span> <span class="n">_read</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="n">kwds</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">587</span> 
-<span class="g g-Whitespace">    </span><span class="mi">588</span> 
-
-<span class="nn">/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/pandas/io/parsers/readers.py</span> in <span class="ni">_read</span><span class="nt">(filepath_or_buffer, kwds)</span>
-<span class="g g-Whitespace">    </span><span class="mi">480</span> 
-<span class="g g-Whitespace">    </span><span class="mi">481</span>     <span class="c1"># Create the parser.</span>
-<span class="ne">--&gt; </span><span class="mi">482</span>     <span class="n">parser</span> <span class="o">=</span> <span class="n">TextFileReader</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">483</span> 
-<span class="g g-Whitespace">    </span><span class="mi">484</span>     <span class="k">if</span> <span class="n">chunksize</span> <span class="ow">or</span> <span class="n">iterator</span><span class="p">:</span>
-
-<span class="nn">/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/pandas/io/parsers/readers.py</span> in <span class="ni">__init__</span><span class="nt">(self, f, engine, **kwds)</span>
-<span class="g g-Whitespace">    </span><span class="mi">809</span>             <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">[</span><span class="s2">&quot;has_index_names&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">kwds</span><span class="p">[</span><span class="s2">&quot;has_index_names&quot;</span><span class="p">]</span>
-<span class="g g-Whitespace">    </span><span class="mi">810</span> 
-<span class="ne">--&gt; </span><span class="mi">811</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_make_engine</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">engine</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">812</span> 
-<span class="g g-Whitespace">    </span><span class="mi">813</span>     <span class="k">def</span> <span class="nf">close</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-
-<span class="nn">/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/pandas/io/parsers/readers.py</span> in <span class="ni">_make_engine</span><span class="nt">(self, engine)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1038</span>             <span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1039</span>         <span class="c1"># error: Too many arguments for &quot;ParserBase&quot;</span>
-<span class="ne">-&gt; </span><span class="mi">1040</span>         <span class="k">return</span> <span class="n">mapping</span><span class="p">[</span><span class="n">engine</span><span class="p">](</span><span class="bp">self</span><span class="o">.</span><span class="n">f</span><span class="p">,</span> <span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">)</span>  <span class="c1"># type: ignore[call-arg]</span>
-<span class="g g-Whitespace">   </span><span class="mi">1041</span> 
-<span class="g g-Whitespace">   </span><span class="mi">1042</span>     <span class="k">def</span> <span class="nf">_failover_to_python</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-
-<span class="nn">/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/pandas/io/parsers/c_parser_wrapper.py</span> in <span class="ni">__init__</span><span class="nt">(self, src, **kwds)</span>
-<span class="g g-Whitespace">     </span><span class="mi">49</span> 
-<span class="g g-Whitespace">     </span><span class="mi">50</span>         <span class="c1"># open handles</span>
-<span class="ne">---&gt; </span><span class="mi">51</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_open_handles</span><span class="p">(</span><span class="n">src</span><span class="p">,</span> <span class="n">kwds</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">52</span>         <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
-<span class="g g-Whitespace">     </span><span class="mi">53</span> 
-
-<span class="nn">/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/pandas/io/parsers/base_parser.py</span> in <span class="ni">_open_handles</span><span class="nt">(self, src, kwds)</span>
-<span class="g g-Whitespace">    </span><span class="mi">220</span>         <span class="n">Let</span> <span class="n">the</span> <span class="n">readers</span> <span class="nb">open</span> <span class="n">IOHandles</span> <span class="n">after</span> <span class="n">they</span> <span class="n">are</span> <span class="n">done</span> <span class="k">with</span> <span class="n">their</span> <span class="n">potential</span> <span class="n">raises</span><span class="o">.</span>
-<span class="g g-Whitespace">    </span><span class="mi">221</span>         <span class="s2">&quot;&quot;&quot;</span>
-<span class="ne">--&gt; </span><span class="mi">222</span><span class="s2">         self.handles = get_handle(</span>
-<span class="g g-Whitespace">    </span><span class="mi">223</span><span class="s2">             src,</span>
-<span class="g g-Whitespace">    </span><span class="mi">224</span><span class="s2">             &quot;r&quot;,</span>
-
-<span class="nn">/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/pandas/io/common.py</span> in <span class="ni">get_handle</span><span class="nt">(path_or_buf, mode, encoding, compression, memory_map, is_text, errors, storage_options)</span>
-<span class="g g-Whitespace">    </span><span class="mi">699</span><span class="s2">         if ioargs.encoding and &quot;b&quot; not in ioargs.mode:</span>
-<span class="g g-Whitespace">    </span><span class="mi">700</span><span class="s2">             # Encoding</span>
-<span class="ne">--&gt; </span><span class="mi">701</span><span class="s2">             handle = open(</span>
-<span class="g g-Whitespace">    </span><span class="mi">702</span><span class="s2">                 handle,</span>
-<span class="g g-Whitespace">    </span><span class="mi">703</span><span class="s2">                 ioargs.mode,</span>
-
-<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;../../Data/4mu_2011.csv&#39;
-</pre></div>
-</div>
-</div>
 </div>
 <p>According to the Standard Model, one of the ways the Higgs boson can decay is by first creating two Z bosons that then decay further into four leptons (electrons, muons, etc.). It is not the only process with such a final state, of course, so one has to sift through quite a lot of noise to see that happening. The theory does not say too much about what the mass of Higgs could be, but some clever assumptions and enlightened guesses can get you pretty far. For example, four lepton decay is very dominant in some mass regions, which then guides our search.</p>
 <div class="cell docutils container">
@@ -392,20 +322,6 @@
 <span class="n">hist</span><span class="p">,</span> <span class="n">bins</span> <span class="o">=</span> <span class="n">M_hist</span>
 <span class="n">width</span> <span class="o">=</span> <span class="mf">1.0</span><span class="o">*</span><span class="p">(</span><span class="n">bins</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">bins</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 <span class="n">center</span> <span class="o">=</span> <span class="p">(</span><span class="n">bins</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">bins</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span> <span class="o">/</span> <span class="mi">2</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1919</span><span class="o">/</span><span class="mf">2875390379.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">nbins</span> <span class="o">=</span> <span class="mi">37</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span> 
-<span class="ne">----&gt; </span><span class="mi">7</span> <span class="n">M_hist</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">histogram</span><span class="p">(</span><span class="n">fourlep</span><span class="p">[</span><span class="s1">&#39;M&#39;</span><span class="p">],</span> <span class="n">bins</span> <span class="o">=</span> <span class="n">nbins</span><span class="p">,</span> <span class="nb">range</span> <span class="o">=</span> <span class="p">(</span><span class="n">rmin</span><span class="p">,</span><span class="n">rmax</span><span class="p">))</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span> 
-<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="n">hist</span><span class="p">,</span> <span class="n">bins</span> <span class="o">=</span> <span class="n">M_hist</span>
-
-<span class="ne">NameError</span>: name &#39;fourlep&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -437,21 +353,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1919</span><span class="o">/</span><span class="mf">1833156955.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> 
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
-<span class="ne">----&gt; </span><span class="mi">4</span> <span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">center</span><span class="p">,</span> <span class="n">zz</span><span class="p">,</span> <span class="n">align</span> <span class="o">=</span> <span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">width</span> <span class="o">=</span> <span class="n">width</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="n">linewidth</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">edgecolor</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> 
-<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;4l invariant mass (GeV)&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;center&#39; is not defined
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 1080x216 with 0 Axes&gt;
-</pre></div>
-</div>
+<img alt="../../_images/Hunting-the-Higgs-4leptons_9_0.png" src="../../_images/Hunting-the-Higgs-4leptons_9_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -469,21 +371,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1919</span><span class="o">/</span><span class="mf">3371460986.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> 
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
-<span class="ne">----&gt; </span><span class="mi">4</span> <span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">center</span><span class="p">,</span> <span class="n">dy</span><span class="p">,</span> <span class="n">align</span> <span class="o">=</span> <span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">width</span> <span class="o">=</span> <span class="n">width</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;g&#39;</span><span class="p">,</span> <span class="n">linewidth</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">edgecolor</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> 
-<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;4l invariant mass (GeV)&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;center&#39; is not defined
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 1080x216 with 0 Axes&gt;
-</pre></div>
-</div>
+<img alt="../../_images/Hunting-the-Higgs-4leptons_10_0.png" src="../../_images/Hunting-the-Higgs-4leptons_10_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -501,21 +389,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1919</span><span class="o">/</span><span class="mf">2989873927.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> 
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
-<span class="ne">----&gt; </span><span class="mi">4</span> <span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">center</span><span class="p">,</span> <span class="n">ttbar</span><span class="p">,</span> <span class="n">align</span> <span class="o">=</span> <span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">width</span> <span class="o">=</span> <span class="n">width</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">linewidth</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">edgecolor</span> <span class="o">=</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> 
-<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;4l invariant mass (GeV)&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;center&#39; is not defined
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 1080x216 with 0 Axes&gt;
-</pre></div>
-</div>
+<img alt="../../_images/Hunting-the-Higgs-4leptons_11_0.png" src="../../_images/Hunting-the-Higgs-4leptons_11_0.png" />
 </div>
 </div>
 <p>Let us stack them together and see what kind of shape we might expect from the experiment.</p>
@@ -547,21 +421,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1919</span><span class="o">/</span><span class="mf">2590320608.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> 
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1"># ttbar</span>
-<span class="ne">----&gt; </span><span class="mi">4</span> <span class="n">ttbar_bar</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">center</span><span class="p">,</span> <span class="n">ttbar</span><span class="p">,</span> <span class="n">align</span> <span class="o">=</span> <span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">width</span> <span class="o">=</span> <span class="n">width</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">linewidth</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">edgecolor</span> <span class="o">=</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span>                     <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;$t\bar</span><span class="si">{t}</span><span class="s1">$&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span> 
-
-<span class="ne">NameError</span>: name &#39;center&#39; is not defined
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 1080x360 with 0 Axes&gt;
-</pre></div>
-</div>
+<img alt="../../_images/Hunting-the-Higgs-4leptons_13_0.png" src="../../_images/Hunting-the-Higgs-4leptons_13_0.png" />
 </div>
 </div>
 <p>So there ought to be something around 90 GeV or so, which makes sense as most of this comes from Z bosons. Let us add our measured data on top of that. How well do they line up?</p>
@@ -600,28 +460,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1919</span><span class="o">/</span><span class="mf">2743234405.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> 
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">xerrs</span> <span class="o">=</span> <span class="p">[</span><span class="n">width</span><span class="o">*</span><span class="mf">0.5</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">nbins</span><span class="p">)]</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">yerrs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">hist</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> 
-
-<span class="nn">/tmp/ipykernel_1919/2743234405.py</span> in <span class="ni">&lt;listcomp&gt;</span><span class="nt">(.0)</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> 
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">xerrs</span> <span class="o">=</span> <span class="p">[</span><span class="n">width</span><span class="o">*</span><span class="mf">0.5</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">nbins</span><span class="p">)]</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">yerrs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">hist</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> 
-
-<span class="ne">NameError</span>: name &#39;width&#39; is not defined
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 1080x360 with 0 Axes&gt;
-</pre></div>
-</div>
+<img alt="../../_images/Hunting-the-Higgs-4leptons_15_0.png" src="../../_images/Hunting-the-Higgs-4leptons_15_0.png" />
 </div>
 </div>
 <p>There are clearly some points in there that do not seem to arise in our simulated processes. For comparison’s sake, physicists made distribution simulations for Higgs at varying masses, one of which is shown here. This graph shows us what the Higgs boson should look like, if it had a mass of 125 GeV.</p>
@@ -640,21 +479,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1919</span><span class="o">/</span><span class="mf">4203874540.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> 
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
-<span class="ne">----&gt; </span><span class="mi">4</span> <span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">center</span><span class="p">,</span> <span class="n">hzz</span><span class="p">,</span> <span class="n">align</span> <span class="o">=</span> <span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">width</span> <span class="o">=</span> <span class="n">width</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">linewidth</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">edgecolor</span> <span class="o">=</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> 
-<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;4l invariant mass (GeV)&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;center&#39; is not defined
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 1080x216 with 0 Axes&gt;
-</pre></div>
-</div>
+<img alt="../../_images/Hunting-the-Higgs-4leptons_17_0.png" src="../../_images/Hunting-the-Higgs-4leptons_17_0.png" />
 </div>
 </div>
 <p>Bonus question: how can something, that seems to have a mass of roughly 125 GeV decay via two Z bosons, with mass over 90 GeV?</p>
@@ -695,21 +520,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1919</span><span class="o">/</span><span class="mf">4090911327.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> 
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1"># ttbar</span>
-<span class="ne">----&gt; </span><span class="mi">4</span> <span class="n">ttbar_bar</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">center</span><span class="p">,</span> <span class="n">ttbar</span><span class="p">,</span> <span class="n">align</span> <span class="o">=</span> <span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">width</span> <span class="o">=</span> <span class="n">width</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">linewidth</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">edgecolor</span> <span class="o">=</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span>                     <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;$t\bar</span><span class="si">{t}</span><span class="s1">$&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span> 
-
-<span class="ne">NameError</span>: name &#39;center&#39; is not defined
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 1080x360 with 0 Axes&gt;
-</pre></div>
-</div>
+<img alt="../../_images/Hunting-the-Higgs-4leptons_19_0.png" src="../../_images/Hunting-the-Higgs-4leptons_19_0.png" />
 </div>
 </div>
 <p>This sample seems quite small, and by numerical length it is, but it still gives us an enlightening look at how research is done. There are not very many processes that produce four leptons at the end, so this comprises about half the data that is publicly available from the 2011-2012 run. More precise information about the data can be found <a class="reference external" href="http://opendata.cern.ch/record/5500">here</a>.</p>
@@ -723,17 +534,291 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1919</span><span class="o">/</span><span class="mf">2825995991.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> 
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">pd</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">max_columns</span> <span class="o">=</span> <span class="mi">50</span>
-<span class="ne">----&gt; </span><span class="mi">4</span> <span class="n">fourlep</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-<span class="ne">NameError</span>: name &#39;fourlep&#39; is not defined
-</pre></div>
-</div>
-</div>
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Run</th>
+      <th>Event</th>
+      <th>PID1</th>
+      <th>E1</th>
+      <th>px1</th>
+      <th>py1</th>
+      <th>pz1</th>
+      <th>pt1</th>
+      <th>eta1</th>
+      <th>phi1</th>
+      <th>Q1</th>
+      <th>PID2</th>
+      <th>E2</th>
+      <th>px2</th>
+      <th>py2</th>
+      <th>pz2</th>
+      <th>pt2</th>
+      <th>eta2</th>
+      <th>phi2</th>
+      <th>Q2</th>
+      <th>PID3</th>
+      <th>E3</th>
+      <th>px3</th>
+      <th>py3</th>
+      <th>pz3</th>
+      <th>pt3</th>
+      <th>eta3</th>
+      <th>phi3</th>
+      <th>Q3</th>
+      <th>PID4</th>
+      <th>E4</th>
+      <th>px4</th>
+      <th>py4</th>
+      <th>pz4</th>
+      <th>pt4</th>
+      <th>eta4</th>
+      <th>phi4</th>
+      <th>Q4</th>
+      <th>mZ1</th>
+      <th>mZ2</th>
+      <th>M</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>173657</td>
+      <td>34442568</td>
+      <td>13</td>
+      <td>35.9978</td>
+      <td>32.7631</td>
+      <td>-4.41922</td>
+      <td>-14.2436</td>
+      <td>33.0598</td>
+      <td>-0.418519</td>
+      <td>-0.134075</td>
+      <td>-1</td>
+      <td>-13</td>
+      <td>29.0804</td>
+      <td>-19.31050</td>
+      <td>-5.31425</td>
+      <td>21.0837</td>
+      <td>20.0284</td>
+      <td>0.918146</td>
+      <td>-2.873040</td>
+      <td>1</td>
+      <td>13</td>
+      <td>17.3154</td>
+      <td>-10.87010</td>
+      <td>-3.64596</td>
+      <td>12.9753</td>
+      <td>11.46530</td>
+      <td>0.971505</td>
+      <td>-2.81797</td>
+      <td>-1</td>
+      <td>-13</td>
+      <td>11.49390</td>
+      <td>-1.20978</td>
+      <td>11.35650</td>
+      <td>1.29029</td>
+      <td>11.42070</td>
+      <td>0.112739</td>
+      <td>1.676920</td>
+      <td>1</td>
+      <td>62.5513</td>
+      <td>20.5205</td>
+      <td>91.4517</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>166512</td>
+      <td>337493970</td>
+      <td>13</td>
+      <td>52.9826</td>
+      <td>-49.9170</td>
+      <td>8.17082</td>
+      <td>15.7696</td>
+      <td>50.5813</td>
+      <td>0.306925</td>
+      <td>2.979340</td>
+      <td>-1</td>
+      <td>13</td>
+      <td>72.1018</td>
+      <td>15.32840</td>
+      <td>21.35470</td>
+      <td>-67.1392</td>
+      <td>26.2866</td>
+      <td>-1.667150</td>
+      <td>0.948222</td>
+      <td>-1</td>
+      <td>-13</td>
+      <td>89.7552</td>
+      <td>10.34670</td>
+      <td>-20.27240</td>
+      <td>86.8214</td>
+      <td>22.76010</td>
+      <td>2.048740</td>
+      <td>-1.09888</td>
+      <td>1</td>
+      <td>-13</td>
+      <td>30.21620</td>
+      <td>2.32913</td>
+      <td>-13.06840</td>
+      <td>27.14400</td>
+      <td>13.27430</td>
+      <td>1.463510</td>
+      <td>-1.394420</td>
+      <td>1</td>
+      <td>92.1352</td>
+      <td>90.2049</td>
+      <td>235.8800</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>171091</td>
+      <td>69105221</td>
+      <td>13</td>
+      <td>165.9750</td>
+      <td>-12.6280</td>
+      <td>-30.22890</td>
+      <td>162.7100</td>
+      <td>32.7605</td>
+      <td>2.305880</td>
+      <td>-1.966510</td>
+      <td>-1</td>
+      <td>-13</td>
+      <td>68.1611</td>
+      <td>6.93837</td>
+      <td>22.85760</td>
+      <td>63.8382</td>
+      <td>23.8875</td>
+      <td>1.709440</td>
+      <td>1.276090</td>
+      <td>1</td>
+      <td>-13</td>
+      <td>19.5056</td>
+      <td>4.71517</td>
+      <td>8.50412</td>
+      <td>16.9087</td>
+      <td>9.72383</td>
+      <td>1.320370</td>
+      <td>1.06454</td>
+      <td>1</td>
+      <td>13</td>
+      <td>24.83870</td>
+      <td>-8.09683</td>
+      <td>3.05681</td>
+      <td>23.28190</td>
+      <td>8.65464</td>
+      <td>1.715610</td>
+      <td>2.780600</td>
+      <td>-1</td>
+      <td>58.3874</td>
+      <td>14.3541</td>
+      <td>79.3858</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>172952</td>
+      <td>559839432</td>
+      <td>13</td>
+      <td>110.2600</td>
+      <td>-69.1510</td>
+      <td>68.83630</td>
+      <td>-51.3524</td>
+      <td>97.5720</td>
+      <td>-0.504613</td>
+      <td>2.358470</td>
+      <td>-1</td>
+      <td>13</td>
+      <td>88.3199</td>
+      <td>85.94400</td>
+      <td>-16.81970</td>
+      <td>-11.4510</td>
+      <td>87.5743</td>
+      <td>-0.130388</td>
+      <td>-0.193263</td>
+      <td>-1</td>
+      <td>-13</td>
+      <td>45.0987</td>
+      <td>-19.98280</td>
+      <td>-29.14080</td>
+      <td>-28.0247</td>
+      <td>35.33410</td>
+      <td>-0.727298</td>
+      <td>-2.17188</td>
+      <td>1</td>
+      <td>-13</td>
+      <td>9.79377</td>
+      <td>3.02072</td>
+      <td>8.34856</td>
+      <td>-4.13324</td>
+      <td>8.87824</td>
+      <td>-0.450186</td>
+      <td>1.223630</td>
+      <td>1</td>
+      <td>91.1877</td>
+      <td>37.3758</td>
+      <td>232.9290</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>167282</td>
+      <td>44166176</td>
+      <td>-13</td>
+      <td>54.3881</td>
+      <td>-27.4999</td>
+      <td>-43.86520</td>
+      <td>-16.6628</td>
+      <td>51.7726</td>
+      <td>-0.316533</td>
+      <td>-2.130770</td>
+      <td>1</td>
+      <td>13</td>
+      <td>39.8417</td>
+      <td>31.53530</td>
+      <td>18.85330</td>
+      <td>15.4088</td>
+      <td>36.7413</td>
+      <td>0.407975</td>
+      <td>0.538835</td>
+      <td>-1</td>
+      <td>-13</td>
+      <td>20.3208</td>
+      <td>3.30081</td>
+      <td>16.01250</td>
+      <td>12.0677</td>
+      <td>16.34910</td>
+      <td>0.683619</td>
+      <td>1.36750</td>
+      <td>1</td>
+      <td>13</td>
+      <td>6.83735</td>
+      <td>4.64276</td>
+      <td>-2.38618</td>
+      <td>4.41465</td>
+      <td>5.22007</td>
+      <td>0.767963</td>
+      <td>-0.474752</td>
+      <td>-1</td>
+      <td>90.7513</td>
+      <td>14.7350</td>
+      <td>119.2900</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <p>As we can see, there is certainly some activity going on in the 125 GeV region. This data set is too small to say anything for certain, but it is not too far off from actual analysis results. The most telling differences mainly arise from our somewhat rough methods compared to the more sophisticated ones used at CMS.
 <img src = 'https://inspirehep.net/record/1124338/files/H4l_mass_v3.png' align = 'right'></p>
