@@ -19,9 +19,4 @@ chapters:
     - file: Exercises-with-open-data/Advanced/Normfit-transversemomentum+pseudorapidity
     - file: Exercises-with-open-data/Advanced/Pseudorapidity-resolution
     - file: Exercises-with-open-data/Advanced/Creating-sound-from-data
-- file: Exercises-with-open-data/Other/other
-  sections:
-    - file: Exercises-with-open-data/Other/Animations_example
-    - file: Exercises-with-open-data/Other/barometer_col_de_la_fausille
-    - file: Exercises-with-open-data/Other/Maps_example
-   
+
