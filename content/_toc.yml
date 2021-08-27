@@ -4,6 +4,7 @@ format: jb-book
 root: intro
 chapters:
 - file: Exercises-with-open-data/Basics/basics
+  caption: Basics
   sections:
   - file: Exercises-with-open-data/Basics/Overlaid-histograms
   - file: Exercises-with-open-data/Basics/Statistics
