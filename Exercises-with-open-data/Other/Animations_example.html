@@ -370,7 +370,7 @@
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2049</span><span class="o">/</span><span class="mf">2216979451.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2029</span><span class="o">/</span><span class="mf">2216979451.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">7</span> 
 <span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="c1"># anim.to_jshtml() changes the animation to (javascript)html, so it can be shown on Notebook</span>
 <span class="ne">----&gt; </span><span class="mi">9</span> <span class="n">HTML</span><span class="p">(</span><span class="n">anim</span><span class="o">.</span><span class="n">to_jshtml</span><span class="p">())</span>
@@ -403,7 +403,7 @@
 <span class="g g-Whitespace">   </span><span class="mi">1777</span> 
 <span class="g g-Whitespace">   </span><span class="mi">1778</span>         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_blit</span><span class="p">:</span>
 
-<span class="nn">/tmp/ipykernel_2049/3120148125.py</span> in <span class="ni">updt_hist</span><span class="nt">(num, iMass)</span>
+<span class="nn">/tmp/ipykernel_2029/3120148125.py</span> in <span class="ni">updt_hist</span><span class="nt">(num, iMass)</span>
 <span class="g g-Whitespace">      </span><span class="mi">8</span>     <span class="n">axes</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">8000</span><span class="p">)</span>
 <span class="g g-Whitespace">      </span><span class="mi">9</span>     <span class="n">axes</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">200</span><span class="p">)</span>
 <span class="ne">---&gt; </span><span class="mi">10</span>     <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">iMass</span><span class="p">[:</span><span class="n">num</span><span class="o">*</span><span class="mi">480</span><span class="p">],</span> <span class="n">bins</span> <span class="o">=</span> <span class="mi">350</span><span class="p">)</span>
@@ -445,18 +445,18 @@
 <span class="g g-Whitespace">   </span><span class="mi">2373</span> 
 
 <span class="nn">/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/matplotlib/axes/_base.py</span> in <span class="ni">add_patch</span><span class="nt">(self, p)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2167</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_set_artist_props</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
 <span class="g g-Whitespace">   </span><span class="mi">2168</span>         <span class="k">if</span> <span class="n">p</span><span class="o">.</span><span class="n">get_clip_path</span><span class="p">()</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">2169</span>             <span class="n">p</span><span class="o">.</span><span class="n">set_clip_path</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">patch</span><span class="p">)</span>
-<span class="ne">-&gt; </span><span class="mi">2170</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_update_patch_limits</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">2169</span>             <span class="n">p</span><span class="o">.</span><span class="n">set_clip_path</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">patch</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2170</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_update_patch_limits</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
 <span class="g g-Whitespace">   </span><span class="mi">2171</span>         <span class="bp">self</span><span class="o">.</span><span class="n">patches</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2172</span>         <span class="n">p</span><span class="o">.</span><span class="n">_remove_method</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">patches</span><span class="o">.</span><span class="n">remove</span>
 
-<span class="nn">/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/matplotlib/axes/_base.py</span> in <span class="ni">_update_patch_limits</span><span class="nt">(self, patch)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2196</span>                 <span class="n">xys</span> <span class="o">=</span> <span class="n">patch_to_data</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">xys</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2197</span> 
-<span class="ne">-&gt; </span><span class="mi">2198</span>             <span class="n">updatex</span><span class="p">,</span> <span class="n">updatey</span> <span class="o">=</span> <span class="n">patch</span><span class="o">.</span><span class="n">get_transform</span><span class="p">()</span><span class="o">.</span>\
-<span class="g g-Whitespace">   </span><span class="mi">2199</span>                 <span class="n">contains_branch_seperately</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">transData</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2200</span>             <span class="bp">self</span><span class="o">.</span><span class="n">update_datalim</span><span class="p">(</span><span class="n">xys</span><span class="p">,</span> <span class="n">updatex</span><span class="o">=</span><span class="n">updatex</span><span class="p">,</span>
+<span class="nn">/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/matplotlib/artist.py</span> in <span class="ni">set_clip_path</span><span class="nt">(self, path, transform)</span>
+<span class="g g-Whitespace">    </span><span class="mi">778</span>             <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">Rectangle</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">779</span>                 <span class="bp">self</span><span class="o">.</span><span class="n">clipbox</span> <span class="o">=</span> <span class="n">TransformedBbox</span><span class="p">(</span><span class="n">Bbox</span><span class="o">.</span><span class="n">unit</span><span class="p">(),</span>
+<span class="ne">--&gt; </span><span class="mi">780</span>                                                <span class="n">path</span><span class="o">.</span><span class="n">get_transform</span><span class="p">())</span>
+<span class="g g-Whitespace">    </span><span class="mi">781</span>                 <span class="bp">self</span><span class="o">.</span><span class="n">_clippath</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="g g-Whitespace">    </span><span class="mi">782</span>                 <span class="n">success</span> <span class="o">=</span> <span class="kc">True</span>
 
 <span class="nn">/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/matplotlib/patches.py</span> in <span class="ni">get_transform</span><span class="nt">(self)</span>
 <span class="g g-Whitespace">    </span><span class="mi">271</span>     <span class="k">def</span> <span class="nf">get_transform</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -465,47 +465,12 @@
 <span class="g g-Whitespace">    </span><span class="mi">274</span> 
 <span class="g g-Whitespace">    </span><span class="mi">275</span>     <span class="k">def</span> <span class="nf">get_data_transform</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 
-<span class="nn">/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/matplotlib/patches.py</span> in <span class="ni">get_patch_transform</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">775</span>         <span class="c1"># important to call the accessor method and not directly access the</span>
-<span class="g g-Whitespace">    </span><span class="mi">776</span>         <span class="c1"># transformation member variable.</span>
-<span class="ne">--&gt; </span><span class="mi">777</span>         <span class="n">bbox</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_bbox</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">778</span>         <span class="k">return</span> <span class="p">(</span><span class="n">transforms</span><span class="o">.</span><span class="n">BboxTransformTo</span><span class="p">(</span><span class="n">bbox</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">779</span>                 <span class="o">+</span> <span class="n">transforms</span><span class="o">.</span><span class="n">Affine2D</span><span class="p">()</span><span class="o">.</span><span class="n">rotate_deg_around</span><span class="p">(</span>
-
-<span class="nn">/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/matplotlib/patches.py</span> in <span class="ni">get_bbox</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">854</span>     <span class="k">def</span> <span class="nf">get_bbox</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">855</span>         <span class="sd">&quot;&quot;&quot;Return the `.Bbox`.&quot;&quot;&quot;</span>
-<span class="ne">--&gt; </span><span class="mi">856</span>         <span class="n">x0</span><span class="p">,</span> <span class="n">y0</span><span class="p">,</span> <span class="n">x1</span><span class="p">,</span> <span class="n">y1</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_convert_units</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">857</span>         <span class="k">return</span> <span class="n">transforms</span><span class="o">.</span><span class="n">Bbox</span><span class="o">.</span><span class="n">from_extents</span><span class="p">(</span><span class="n">x0</span><span class="p">,</span> <span class="n">y0</span><span class="p">,</span> <span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">858</span> 
-
-<span class="nn">/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/matplotlib/patches.py</span> in <span class="ni">_convert_units</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">764</span>     <span class="k">def</span> <span class="nf">_convert_units</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">765</span>         <span class="sd">&quot;&quot;&quot;Convert bounds of the rectangle.&quot;&quot;&quot;</span>
-<span class="ne">--&gt; </span><span class="mi">766</span>         <span class="n">x0</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">convert_xunits</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_x0</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">767</span>         <span class="n">y0</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">convert_yunits</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_y0</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">768</span>         <span class="n">x1</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">convert_xunits</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_x0</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">_width</span><span class="p">)</span>
-
-<span class="nn">/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/matplotlib/artist.py</span> in <span class="ni">convert_xunits</span><span class="nt">(self, x)</span>
-<span class="g g-Whitespace">    </span><span class="mi">201</span>         <span class="k">if</span> <span class="n">ax</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">202</span>             <span class="k">return</span> <span class="n">x</span>
-<span class="ne">--&gt; </span><span class="mi">203</span>         <span class="k">return</span> <span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">convert_units</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">204</span> 
-<span class="g g-Whitespace">    </span><span class="mi">205</span>     <span class="k">def</span> <span class="nf">convert_yunits</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
-
-<span class="nn">/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/matplotlib/axis.py</span> in <span class="ni">convert_units</span><span class="nt">(self, x)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1494</span>     <span class="k">def</span> <span class="nf">convert_units</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-<span class="g g-Whitespace">   </span><span class="mi">1495</span>         <span class="c1"># If x is natively supported by Matplotlib, doesn&#39;t need converting</span>
-<span class="ne">-&gt; </span><span class="mi">1496</span>         <span class="k">if</span> <span class="n">munits</span><span class="o">.</span><span class="n">_is_natively_supported</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-<span class="g g-Whitespace">   </span><span class="mi">1497</span>             <span class="k">return</span> <span class="n">x</span>
-<span class="g g-Whitespace">   </span><span class="mi">1498</span> 
-
-<span class="nn">/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/matplotlib/units.py</span> in <span class="ni">_is_natively_supported</span><span class="nt">(x)</span>
-<span class="g g-Whitespace">     </span><span class="mi">56</span> 
-<span class="g g-Whitespace">     </span><span class="mi">57</span> 
-<span class="ne">---&gt; </span><span class="mi">58</span> <span class="k">def</span> <span class="nf">_is_natively_supported</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-<span class="g g-Whitespace">     </span><span class="mi">59</span>     <span class="s2">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">     </span><span class="mi">60</span><span class="s2">     Return whether *x* is of a type that Matplotlib natively supports or an</span>
+<span class="nn">/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/matplotlib/artist.py</span> in <span class="ni">get_transform</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">390</span>     <span class="k">def</span> <span class="nf">get_transform</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">391</span>         <span class="sd">&quot;&quot;&quot;Return the `.Transform` instance used by this artist.&quot;&quot;&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">392</span>         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_transform</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">393</span>             <span class="bp">self</span><span class="o">.</span><span class="n">_transform</span> <span class="o">=</span> <span class="n">IdentityTransform</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">394</span>         <span class="k">elif</span> <span class="p">(</span><span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_transform</span><span class="p">,</span> <span class="n">Transform</span><span class="p">)</span>
 
 <span class="ne">KeyboardInterrupt</span>: 
 </pre></div>
