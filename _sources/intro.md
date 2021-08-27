@@ -5,7 +5,7 @@ This site contains open data-based teaching material related to particle physics
 ### Launching notebook on Binder
 
 1. Choose an exercise from the table of contents
-1. Click the space rocket on top-right corner of the page (see image below).
+1. Click the space rocket on top-right corner of the page (see fig. below).
 1. Click "Binder".
 1. Notebook will now open in Binder. Note that this might take several minutes.
 
