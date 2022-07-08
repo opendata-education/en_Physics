@@ -13,4 +13,4 @@ dependencies:
   - matplotlib
   - scipy
   - pip:
-    - jupyter-book
+    - jupyter-book>=0.7.0b
