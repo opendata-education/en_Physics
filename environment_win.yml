@@ -11,5 +11,6 @@ dependencies:
   - git
   - pandas
   - matplotlib
+  - scipy
   - pip:
     - jupyter-book>=0.7.0b
