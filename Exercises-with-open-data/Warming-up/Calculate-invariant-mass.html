@@ -419,14 +419,36 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#getting-the-data">
-   Getting the data
+  <a class="reference internal nav-link" href="#what-is-the-invariant-mass">
+   What is the invariant mass?
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#performing-the-calculation">
-   Performing the calculation
-  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#getting-the-data">
+     Getting the data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#performing-the-calculation">
+     Performing the calculation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-calculate-the-invariant-mass-to-all-events-and-save-it-in-the-file-invariant-mass">
+     Exercise: Calculate the invariant mass to all events and save it in the file ‘invariant_mass’
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sources">
+     Sources
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#figures">
+     Figures
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -448,14 +470,36 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#getting-the-data">
-   Getting the data
+  <a class="reference internal nav-link" href="#what-is-the-invariant-mass">
+   What is the invariant mass?
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#performing-the-calculation">
-   Performing the calculation
-  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#getting-the-data">
+     Getting the data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#performing-the-calculation">
+     Performing the calculation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-calculate-the-invariant-mass-to-all-events-and-save-it-in-the-file-invariant-mass">
+     Exercise: Calculate the invariant mass to all events and save it in the file ‘invariant_mass’
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sources">
+     Sources
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#figures">
+     Figures
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -470,18 +514,15 @@ title="Print to PDF"
   <section class="tex2jax_ignore mathjax_ignore" id="calculating-the-invariant-mass">
 <h1>Calculating the invariant mass<a class="headerlink" href="#calculating-the-invariant-mass" title="Permalink to this headline">#</a></h1>
 <p>In this example we show how to calculate the <strong>invariant mass</strong> with the CMS open data. The invariant mass is an important concept for particle physicists when looking for new particles.</p>
-<p>The following CSV files include already calculated values for invariant masses:
-- dielectron.csv
-- DoubleMuRun2011A.csv
-- Jpsimumu_Run2011A.csv
-- Ymumu_Run2011A.csv</p>
-<p>For example, with the files <em>Zmumu</em>_<em>Run2011A.csv</em> and <em>Zee</em>_<em>Run2011A.csv</em> it is easy to calculate the values of the invariant masses. Let us start the calculation by importing the necessary Python modules and getting the data. In this example, we will use the file <em>Zmumu</em>_<em>Run2011A.csv</em>, which includes collision events selected from the primary dataset [1] with the specific selection criteria [2].</p>
+<section id="what-is-the-invariant-mass">
+<h2>What is the invariant mass?<a class="headerlink" href="#what-is-the-invariant-mass" title="Permalink to this headline">#</a></h2>
+<p>Particles have a mass that describes their inertia. It is the same mass <span class="math notranslate nohighlight">\(m\)</span> that is used in Newton’s second law <span class="math notranslate nohighlight">\(F=ma\)</span> and Einstein’s equation <span class="math notranslate nohighlight">\(E=mc^2\)</span> (where E means the energy of the particle at rest). It is impossible to measure e.g. Higgs boson, whose mean lifetime is in the order of <span class="math notranslate nohighlight">\(10^{-22}\)</span> seconds [4]. When a particle such as the Higgs boson decays, new particles are formed. The new particles may move at very high speeds and may even not have a mass (e.g. photons). However, a device such as CMS can measure the momentum and energy of these particles, from which we can calculate the <em>invariant mass</em>. It is a property that is “invariant” to the environment it’s measured in. If it is calculated to two particles that come from another particle, we achieve a value that is close to the mass of the original particle. For example, the Higgs boson can decay into four electrons, whose momentum and energy we can measure with a detector. From these we can calculate the invariant mass, which would correspond to the mass of the Higgs boson, since the electrons come from Higgs.</p>
+<p>The invariant mass is conserved when a particle decays into other particles, which makes it an unbeatable tool for particle physics. A detector such as the CMS detects mostly stable particles. In order to determine which decay processes produce these stable particles, researchers must analyze large amounts of data. We can calculate the invariant mass to multiple different events and make a histogram out of our calculated values.</p>
+<p>Below we have a histogram of the invariant mass of collisions where a detector has registered two muons. The spikes in the histogram correspond to the different particles the muons decay from.</p>
 <br>
-<br>
-[1]  CMS collaboration (2016). DoubleMu primary dataset in AOD format from RunA of 2011 (/DoubleMu/Run2011A-12Oct2013-v1/AOD). CERN Open Data Portal. DOI: [10.7483/OPENDATA.CMS.RZ34.QR6N](http://doi.org/10.7483/OPENDATA.CMS.RZ34.QR6N).
-<br>
-[2] Thomas McCauley (2016). Zmumu. Jupyter Notebook file. https://github.com/tpmccauley/cmsopendata-jupyter/blob/hst-0.1/Zmumu.ipynb.<section id="getting-the-data">
-<h2>Getting the data<a class="headerlink" href="#getting-the-data" title="Permalink to this headline">#</a></h2>
+ <img src="https://github.com/cms-opendata-education/cms-jupyter-materials-finnish/blob/master/Kuvat/inv_massa.PNG?raw=true"  align="left" width="600px" title=[Figure 1]>
+ <br><section id="getting-the-data">
+<h3>Getting the data<a class="headerlink" href="#getting-the-data" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import the necessary modules. Pandas is for the data-analysis and numpy for scientific calculation.</span>
@@ -489,13 +530,16 @@ title="Print to PDF"
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
-<span class="c1"># Create a new DataFrame structure from the file &quot;Zmumu_Run2011A.csv&quot;. Name it as &quot;dataset&quot;.</span>
-<span class="n">dataset</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../../Data/Zmumu_Run2011A.csv&#39;</span><span class="p">)</span>
+<span class="c1"># </span>
+<span class="c1"># Create a new DataFrame structure and save it in the file &#39;dataset&#39;. </span>
+<span class="c1"># Data can be obtained from a file with the read_csv() -function. Inside the parentheses, we write the path of the file.</span>
+<span class="c1"># In this case, we use a web address.</span>
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;http://opendata.cern.ch/record/307/files/Zmumu.csv&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>We can check the content that we saved to the variable <em>dataset</em> by printing the 5 first rows with the following code:</p>
+<p>We can check the content that we saved to the variable <em>dataset</em> by printing the 5 first rows with the <em>head()</em>-function:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataset</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -521,154 +565,200 @@ title="Print to PDF"
   <thead>
     <tr style="text-align: right;">
       <th></th>
+      <th>Type</th>
       <th>Run</th>
       <th>Event</th>
+      <th>E1</th>
+      <th>px1</th>
+      <th>py1</th>
+      <th>pz1</th>
       <th>pt1</th>
       <th>eta1</th>
       <th>phi1</th>
       <th>Q1</th>
-      <th>dxy1</th>
-      <th>iso1</th>
+      <th>E2</th>
+      <th>px2</th>
+      <th>py2</th>
+      <th>pz2</th>
       <th>pt2</th>
       <th>eta2</th>
       <th>phi2</th>
       <th>Q2</th>
-      <th>dxy2</th>
-      <th>iso2</th>
+      <th>M</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>165617</td>
-      <td>74969122</td>
-      <td>54.7055</td>
-      <td>-0.432396</td>
-      <td>2.574210</td>
+      <td>GT</td>
+      <td>148031</td>
+      <td>10507008</td>
+      <td>82.201866</td>
+      <td>-41.195288</td>
+      <td>17.433244</td>
+      <td>-68.964962</td>
+      <td>44.7322</td>
+      <td>-1.217690</td>
+      <td>2.741260</td>
       <td>1</td>
-      <td>-0.074544</td>
-      <td>0.499921</td>
-      <td>34.2464</td>
-      <td>-0.988480</td>
-      <td>-0.498704</td>
+      <td>60.621875</td>
+      <td>34.144437</td>
+      <td>-16.119525</td>
+      <td>-47.426984</td>
+      <td>38.8311</td>
+      <td>-1.05139</td>
+      <td>-0.440873</td>
       <td>-1</td>
-      <td>0.071222</td>
-      <td>3.42214</td>
+      <td>82.462692</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>165617</td>
-      <td>75138253</td>
-      <td>24.5872</td>
-      <td>-2.052200</td>
-      <td>2.866570</td>
+      <td>TT</td>
+      <td>148031</td>
+      <td>10507008</td>
+      <td>62.344929</td>
+      <td>35.118050</td>
+      <td>-16.570362</td>
+      <td>-48.775247</td>
+      <td>38.8311</td>
+      <td>-1.051390</td>
+      <td>-0.440873</td>
       <td>-1</td>
-      <td>-0.055437</td>
-      <td>0.000000</td>
-      <td>28.5389</td>
-      <td>0.385163</td>
-      <td>-1.991170</td>
+      <td>82.201866</td>
+      <td>-41.195288</td>
+      <td>17.433244</td>
+      <td>-68.964962</td>
+      <td>44.7322</td>
+      <td>-1.21769</td>
+      <td>2.741260</td>
       <td>1</td>
-      <td>0.051477</td>
-      <td>0.00000</td>
+      <td>83.626204</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>165617</td>
-      <td>75887636</td>
-      <td>31.7386</td>
-      <td>-2.259450</td>
-      <td>-1.332290</td>
+      <td>GT</td>
+      <td>148031</td>
+      <td>10507008</td>
+      <td>62.344929</td>
+      <td>35.118050</td>
+      <td>-16.570362</td>
+      <td>-48.775247</td>
+      <td>38.8311</td>
+      <td>-1.051390</td>
+      <td>-0.440873</td>
       <td>-1</td>
-      <td>0.087917</td>
-      <td>0.000000</td>
-      <td>30.2344</td>
-      <td>-0.468419</td>
-      <td>1.883310</td>
+      <td>81.582778</td>
+      <td>-40.883323</td>
+      <td>17.299297</td>
+      <td>-68.447255</td>
+      <td>44.7322</td>
+      <td>-1.21769</td>
+      <td>2.741260</td>
       <td>1</td>
-      <td>-0.087639</td>
-      <td>0.00000</td>
+      <td>83.308465</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>165617</td>
-      <td>75779415</td>
-      <td>39.7394</td>
-      <td>-0.712338</td>
-      <td>-0.312266</td>
-      <td>1</td>
-      <td>0.058481</td>
-      <td>0.000000</td>
-      <td>48.2790</td>
-      <td>-0.195625</td>
-      <td>2.970320</td>
+      <td>GG</td>
+      <td>148031</td>
+      <td>10507008</td>
+      <td>60.621875</td>
+      <td>34.144437</td>
+      <td>-16.119525</td>
+      <td>-47.426984</td>
+      <td>38.8311</td>
+      <td>-1.051390</td>
+      <td>-0.440873</td>
       <td>-1</td>
-      <td>-0.049201</td>
-      <td>0.00000</td>
+      <td>81.582778</td>
+      <td>-40.883323</td>
+      <td>17.299297</td>
+      <td>-68.447255</td>
+      <td>44.7322</td>
+      <td>-1.21769</td>
+      <td>2.741260</td>
+      <td>1</td>
+      <td>82.149373</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>165617</td>
-      <td>75098104</td>
-      <td>41.2998</td>
-      <td>-0.157055</td>
-      <td>-3.040770</td>
+      <td>GT</td>
+      <td>148031</td>
+      <td>105238546</td>
+      <td>41.826389</td>
+      <td>22.783582</td>
+      <td>15.036444</td>
+      <td>-31.689894</td>
+      <td>27.2981</td>
+      <td>-0.990688</td>
+      <td>0.583351</td>
       <td>1</td>
-      <td>-0.030463</td>
-      <td>1.228040</td>
-      <td>43.4508</td>
-      <td>0.590958</td>
-      <td>-0.042756</td>
+      <td>49.760726</td>
+      <td>-20.177373</td>
+      <td>-9.354149</td>
+      <td>44.513955</td>
+      <td>21.8913</td>
+      <td>1.44434</td>
+      <td>-2.707650</td>
       <td>-1</td>
-      <td>0.044175</td>
-      <td>0.00000</td>
+      <td>90.469123</td>
     </tr>
   </tbody>
 </table>
 </div></div></div>
 </div>
+<p>The data has multiple events, each of which contain multiple values. The most important variables for our purposes are:</p>
+<ul class="simple">
+<li><p><strong>Run</strong>: The run number of the event</p></li>
+<li><p><strong>Event</strong>: The event number. An event is a collision of particles occurring in the detector.</p></li>
+<li><p><strong>E</strong>: the energy of the muon (1 or 2).</p></li>
+<li><p><strong>px,py,pz</strong>: the components of the momentum of the muon.</p></li>
+</ul>
 </section>
 <section id="performing-the-calculation">
-<h2>Performing the calculation<a class="headerlink" href="#performing-the-calculation" title="Permalink to this headline">#</a></h2>
+<h3>Performing the calculation<a class="headerlink" href="#performing-the-calculation" title="Permalink to this headline">#</a></h3>
 <p>Let us use the following expression for the invariant mass <span class="math notranslate nohighlight">\(M\)</span> in the calculation:</p>
+<div class="math notranslate nohighlight">
+\[ M = \sqrt{(E_1 + E_2)^2 - \|\textbf{p}_1 + \textbf{p}_2 \| ^2} = \sqrt{(E_1+E_2)^2-((p_{1_x}+p_{2_x})^2+(p_{1_y}+p_{2_y})^2+(p_{1_z}+p_{2_z})^2)},\]</div>
+<p>where <span class="math notranslate nohighlight">\(\textbf{p}\)</span> contains all the components of the momentum. The equation above gives us the precise value of the invariant mass, so let’s use it when possible.</p>
+<p>However, some datasets son’t have the components of the momentum in them. In this case, we can use an approximation that works in situations where E &gt;&gt; m (as is often the case in particle detectors):</p>
 <div class="math notranslate nohighlight">
 \[M = \sqrt{2p_{T1}p_{T2}(\cosh(\eta_1-\eta_2)-\cos(\phi_1-\phi_2))}.\]</div>
 <p>In the expression <span class="math notranslate nohighlight">\(p_T\)</span> is the component of the momentum which is perpendicular to the beam axis, <span class="math notranslate nohighlight">\(\eta\)</span> is the pseudorapidity (angle) and <span class="math notranslate nohighlight">\(\phi\)</span> the azimuthal angle.</p>
 <p>In the calculation below we will use the <em>numpy</em> module which was named as <em>np</em> in the first code cell. With <em>numpy</em> it is possible to use mathematical commands like <em>sqrt</em> and <em>cosh</em> by calling first the name of the module (<em>np</em>) and then the command separated by a dot. So for example, the square root can be called by writing <em>np.sqrt( )</em>.</p>
 <p>The <em>pt1</em>, <em>pt2</em>, <em>eta1</em>, <em>eta2</em>, <em>phi1</em> and <em>phi2</em> refer to the columns of the data. The code has to be told from where the values will be taken. So for example, if you want to get the column <em>pt1</em>, you have to write <em>dataset.pt1</em>.</p>
 <p>Now we are ready to calculate the values of the invariant masses for the different events. <em>Numpy</em> will automatically calculate the values for all of the events when we give the calculation in the following form, so the equation given is calculated for all of the rows.</p>
+</section>
+<section id="exercise-calculate-the-invariant-mass-to-all-events-and-save-it-in-the-file-invariant-mass">
+<h3>Exercise: Calculate the invariant mass to all events and save it in the file ‘invariant_mass’<a class="headerlink" href="#exercise-calculate-the-invariant-mass-to-all-events-and-save-it-in-the-file-invariant-mass" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">invariant_mass</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">dataset</span><span class="o">.</span><span class="n">pt1</span><span class="o">*</span><span class="n">dataset</span><span class="o">.</span><span class="n">pt2</span><span class="o">*</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">cosh</span><span class="p">(</span><span class="n">dataset</span><span class="o">.</span><span class="n">eta1</span><span class="o">-</span><span class="n">dataset</span><span class="o">.</span><span class="n">eta2</span><span class="p">)</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">dataset</span><span class="o">.</span><span class="n">phi1</span><span class="o">-</span><span class="n">dataset</span><span class="o">.</span><span class="n">phi2</span><span class="p">)))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your code here</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>After the calculation we can check which values were saved in the variable <em>invariant_mass</em> by printing the content of the variable:</p>
+<p>After the calculation we can check which values were saved in the variable <em>invariant_mass</em> by using the method <em>head()</em>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">invariant_mass</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0        89.885744
-1        88.810987
-2        88.472502
-3        90.332620
-4        90.514507
-           ...    
-10578    90.610799
-10579    89.744873
-10580    90.714366
-10581    91.945212
-10582    87.838121
-Length: 10583, dtype: float64
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your code here</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>If you wish to add calculated values as a new column to your data set see an example <a class="reference external" href="https://github.com/cms-opendata-education/cms-jupyter-materials-english/blob/master/Introduction-to-jupyter/Add-column-to-dataframe.ipynb">here</a>.</p>
+<p>Great, you have now calculated the invariant mass of the events! Next, we’d like to draw a histogram. More about this in the next part, “Plotting the invariant mass histogram.”</p>
+</section>
+<section id="sources">
+<h3>Sources<a class="headerlink" href="#sources" title="Permalink to this headline">#</a></h3>
+<p>[1]  McCauley, Thomas; (2014). Z to two muons from 2010. CERN Open Data Portal. <a class="reference external" href="http://doi.org/10.7483/OPENDATA.CMS.XBN9.HFGT">DOI:10.7483/OPENDATA.CMS.XBN9.HFGT</a></p>
+<p>[2] Determination of the off-shell Higgs boson signal strength in the high-mass ZZ final state with the ATLAS detector.
+Url: https://atlas.cern/updates/physics-briefing/higgs-boson-s-shadow</p>
+</section>
+<section id="figures">
+<h3>Figures<a class="headerlink" href="#figures" title="Permalink to this headline">#</a></h3>
+<p>[Figure 1] HLT Dimuon Invariant Mass Distributions in 2017 and 2018 ( CMS DP-2018/055)
+Url: https://twiki.cern.ch/twiki/bin/view/CMSPublic/HLTDiMuon2017and2018</p>
+</section>
 </section>
 </section>
 
